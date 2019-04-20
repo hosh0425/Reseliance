@@ -1,0 +1,171 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Building Damage Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Building Damage Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RBuildingDamageModel</li>
+</ul>
+
+
+<h2>Building Damage</h2>
+<ul>
+	<li>Models > Model > Consequence > Economic > Building Damage</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	$${\eta _S} = \Phi \left( {{\theta _1} \cdot \ln \left( {{\delta _p}} \right) + {\theta _2} \cdot \ln \left( H \right) - {\theta _3} \cdot \alpha  + {\theta _4}} \right) \cdot \exp \left( {{\theta _5} \cdot {I_{VI}} + {\theta _6} \cdot {I_{PI}} + {\theta _7} \cdot {I_{SS}} + {\theta _8} \cdot {I_{SC}} + {\theta _9} \cdot {I_P}} \right) + {\sigma _1} \cdot {\varepsilon _1}$$
+	$${\eta _{ND}} = \Phi \left( {{\theta _{10}} \cdot \ln \left( {{\delta _p}} \right) + {\theta _{11}}} \right) + {\sigma _2} \cdot {\varepsilon _2}$$
+	$${\eta _{NA}} = \Phi \left( {{\theta _{12}} \cdot \ln \left( {{A_p}} \right) - {\theta _{13}} \cdot \alpha } \right) + {\sigma _3} \cdot {\varepsilon _3}$$
+	$${\eta _C} = \Phi \left( {{\theta _{14}} \cdot \ln \left( {{A_p}} \right) - {\theta _{15}} \cdot \alpha } \right) + {\sigma _4} \cdot {\varepsilon _4}$$
+	where Building damage model, gets some of the parameters from the Building Information model. 
+
+    <li>For further information on this model, refer to <a href="#MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013)</a> and <a href="#MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013)</a>.</li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="BuildingInformationModel">Building Information Model</h3>
+<ul>
+	<li>A Building Information Model object that returns the height, \({H}\), the code level, \({\alpha}\), and the irregularity information, \({I_{(.)}}\),  to this model.</li>
+</ul>
+
+<h3 id="PeakDriftRatio">Peak Drift Ratio</h3>
+<ul>
+	<li>\({\delta_p}\) = Peak drift ratio</li>
+</ul>
+
+<h3 id="PeakAcceleration">Peak Acceleration</h3>
+<ul>
+	<li>\({A_p}\) = Peak Acceleration</h3>
+</ul>
+
+<h3 id="Theta1-Theta9">Theta1 - Theta9</h3>
+<ul>
+	<li>\({\theta_1}\) - \({\theta_9}\)= Structural damage model parameters</li>
+</ul>
+
+<h3 id="Theta10-Theta11">Theta10 - Theta11</h3>
+<ul>
+	<li>\({\theta_{10}}\) - \({\theta_{11}}\)= Non-structural drift damage model parameters</li>
+</ul>
+
+<h3 id="Theta12-Theta13">Theta12 - Theta13</h3>
+<ul>
+	<li>\({\theta_{12}}\) - \({\theta_{13}}\)= Non-structural acceleration damage model parameters</li>
+</ul>
+
+<h3 id="Theta14-Theta15">Theta14 - Theta15</h3>
+<ul>
+	<li>\({\theta_{12}}\) - \({\theta_{13}}\)= Non-structural acceleration damage model parameters</li>
+</ul>
+
+<h3 id="Sigma1">Sigma1</h3>
+<ul>
+	<li>\({\sigma_1}\) = Standard deviation of the structural damage model error</li>
+</ul>
+
+<h3 id="Sigma2">Sigma2</h3>
+<ul>
+	<li>\({\sigma_2}\) = Standard deviation of the non-structural drift damage model error</li>
+</ul>
+
+<h3 id="Sigma3">Sigma3</h3>
+<ul>
+	<li>\({\sigma_3}\) = Standard deviation of the non-structural acceleration damage model error</li>
+</ul>
+
+<h3 id="Sigma4">Sigma4</h3>
+<ul>
+	<li>\({\sigma_4}\) = Standard deviation of the content damage model error</li>
+</ul>
+
+<h3 id="Epsilon1">Epsilon1</h3>
+<ul>
+	<li>\({\varepsilon_1}\) = Structural damage model error</li>
+</ul>
+
+<h3 id="Epsilon2">Epsilon2</h3>
+<ul>
+	<li>\({\varepsilon_2}\) = Structural damage model error</li>
+</ul>
+
+<h3 id="Epsilon3">Epsilon3</h3>
+<ul>
+	<li>\({\varepsilon_1}\) = Non-structural acceleration damage model error</li>
+</ul>
+
+<h3 id="Epsilon4">Epsilon4</h3>
+<ul>
+	<li>\({\varepsilon_2}\) = Content damage model error</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({\eta_S}\) = Structural damage ratio </li>
+	<li>\({\eta_{ND}}\) = Non-structural drift damage ratio  </li>
+	<li>\({\eta_{NA}}\) = Non-structural acceleration damage ratio   </li>
+	<li>\({\eta_C}\) = Content damage ratio  </li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part I: Models,” Structural Safety, 42, pp. 54-62 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.003">DOI</a>)</li>
+		<li id="MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part II: Analysis,” Structural Safety, 42, pp. 63-74 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.004">DOI</a>)</li>
+	</ul>
+
+
+</body>
+
+</html>

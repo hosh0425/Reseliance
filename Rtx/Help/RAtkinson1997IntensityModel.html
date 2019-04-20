@@ -1,0 +1,156 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Atkinson 1997 Intensity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Atkinson 1997 Intensity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RAtkinson1997IntensityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Intensity > Atkinson 1997 Intensity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the spectral acceleration or the peak ground acceleration at specified locations for given magnitude and hypocenter location of several earthquake sources as input, based on the Atkinson-Boore (1997) attenuation relation.</li>
+	<li>For more information, see <a href="#BooreAtkinson1997">Boore-Atkinson (1997)</a></li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="PeriodParameterList">Period Parameter List</h3>
+<ul>
+	<li>List of the natural periods at which the intensity is evaluated</li>
+</ul>
+
+<h3 id="Magnitude">Magnitude</h3>
+<ul>
+	<li>Magnitudes of various earthquake sources</li>
+</ul>
+
+<h3 id="HypocentreLocation">Hypocentre Location</h3>
+<ul>
+	<li>Hypocenter locations of earthquake sources, which will automatically yield the radius \({R}\) to the various output locations.</li>
+</ul>
+
+<h3 id="SoilType">Soil Type</h3>
+<ul>
+	<li>The type of soil that can be "Rock" or "FirmSoil"</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = Model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here)</li>
+</ul>
+
+<h3 id="C0Uncertainty">C 0 Uncertainty</h3>
+<ul>
+	<li>The coefficient of quadratic equations that approximate the estimates for the purpose of seismic hazard calculations.</li>
+</ul>
+
+<h3 id="C1Uncertainty">C 1 Uncertainty</h3>
+<ul>
+	<li>The coefficient of quadratic equations that approximate the estimates for the purpose of seismic hazard calculations.</li>
+</ul>
+
+<h3 id="C2Uncertainty">C 2 Uncertainty</h3>
+<ul>
+	<li>The coefficient of quadratic equations that approximate the estimates for the purpose of seismic hazard calculations.</li>
+</ul>
+
+<h3 id="C3Uncertainty">C 3 Uncertainty</h3>
+<ul>
+	<li>The coefficient of quadratic equations that approximate the estimates for the purpose of seismic hazard calculations.</li>
+</ul>
+
+<h3 id="Ca3Uncertainty">C a3 Uncertainty</h3>
+<ul>
+	<li>Correction factor based on empirical analysis results</li>
+</ul>
+
+<h3 id="C4Uncertainty">C a4 Uncertainty</h3>
+<ul>
+	<li>Correction factor based on empirical analysis results</li>
+</ul>
+
+<h3 id="CsigmaUncertainty">Csigma Uncertainty</h3>
+<ul>
+	<li>The standard deviation of model error</li>
+</ul>
+
+<h3 id="CsUncertainty">Cs Uncertainty</h3>
+<ul>
+	<li>Soil factor correction</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>Earthquake intensities (as many as the locations provided in the input)</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="BooreAtkinson1997">Atkinson, G. M., & Boore, D. M. (1997). Stochastic point-source modeling of ground motions in the Cascadia region. Seismological Research Letters, 68(1), 74–85</li>
+</ul>
+
+</body>
+
+</html>

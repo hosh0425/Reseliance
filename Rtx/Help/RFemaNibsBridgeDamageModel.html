@@ -1,0 +1,143 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Fema Nibs Bridge Damage Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>FEMA-NIBS Bridge Damage Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RFemaNibsBridgeDamageModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Economic > FEMA-NIBS Bridge Damage</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the damage ratio and the percent functional for a bridge subjected to the ground shaking and the permanent ground deformation based on the HAZUS (FEMA-NIBS 2003) approach.</li>
+	<li>For further information on this model, refer to <a href="#FEMANIBS">FEMA-NIBS (2003)</a>.</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="AnalysisType">Analysis Type</h3>
+<ul>
+	<li>List of the types of analysis including ground shaking, ground failure, or both</li>
+</ul>
+
+<h3 id="BridgeType">Bridge Type</h3>
+<ul>
+	<li>Type of the bridge according to FEMA-NIBS</li>
+</ul>
+
+<h3 id="Sa1">Sa 1</h3>
+<ul>
+	<li>\({S_{a_1}}\) = 5%-damped elastic spectral acceleration at the period of 1.0s at the bridge site</li>
+</ul>
+
+<h3 id="Sa2">Sa 2</h3>
+<ul>
+	<li>\({S_{a_2}}\) = 5%-damped elastic spectral acceleration at the period of 0.3s at the bridge site</li>
+</ul>
+
+<h3 id="Time">Time</h3>
+<ul>
+	<li>Number of days elapsed since the earthquake event</li>
+</ul>
+
+<h3 id="NumberOfSpans">Number of Spans</h3>
+<ul>
+	<li>Number of Spans (given as an integer)</li>
+</ul>
+
+<h3 id="AngleofSkew">Angle of Skew</h3>
+<ul>
+	<li>Angle between the centerline of a pier and a line normal to the roadway centerline  (given as a real number)</li>
+</ul>
+
+<h3 id="PGD">PGD</h3>
+<ul>
+	<li>\({PGD}\) = Permanent ground deformation</li>
+</ul>
+
+<h3 id="BridgeLength">Bridge Length</h3>
+<ul>
+	<li>Bridge Length (given as a real number)</li>
+</ul>
+
+<h3 id="SpanWidth">Span Width</h3>
+<ul>
+	<li>Span Width (given as a real number)</li>
+</ul>
+
+<h3 id="ModelUncertainty">Model Uncertainty</h3>
+<ul>
+	<li>A standard-normal random variable</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>Damage Ratio</li>
+	<li>Percentage of Functionality</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="FEMANIBS">FEMA-NIBS (2003) Earthquake loss estimation methodology—HAZUS technical manual. Federal Emergency Management Agency and National Institute of Building Sciences, Washington, DC, USA.</li>
+	</ul>
+
+
+
+</body>
+
+</html>

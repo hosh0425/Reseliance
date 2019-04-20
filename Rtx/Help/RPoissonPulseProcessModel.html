@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Poisson Pulse Process Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Poisson Pulse Process Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RPoissonPulseProcessModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Occurrence > Poisson Pulse Process</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the time instants at which a hazard occurs.</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MagnitudeModel">Magnitude Model</h3>
+<ul>
+	<li>Magnitude/severity model associated with the hazard</li>
+</ul>
+
+<h3 id="AssociatedModelList">Associated Model List</h3>
+<ul>
+	<li>List of any other models associated with this hazard that should not be evaluated when the hazard is inactive, e.g., a location model.</li>
+</ul>
+
+<h3 id="NonzeroOccurrenceRate">Nonzero Occurrence Rate</h3>
+<ul>
+	<li>Occurrence rate of the events with nonzero intensity (given as a real number per day)</li>
+</ul>
+
+<h3 id="MeanDuration">Mean Duration</h3>
+<ul>
+	<li>Mean duration of events (given as a real number in days)</li>
+</ul>
+
+<h3 id="TimeInstantGenerationScheme ">Time Instant Generation Scheme </h3>
+<ul>
+	<li>Method of time generation</li>
+	<li>The &ldquo;Exact&rdquo; option generates the time instants according to the occurrence rate of the underlying process.</li>
+	<li>The &ldquo;Approximate&rdquo; option will generate the time instants according to the nonzero occurrence rate.</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not generate response objects.</li>
+	<li>It provides the generated time instants to the orchestrating algorithm.</li>
+</ul>	
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

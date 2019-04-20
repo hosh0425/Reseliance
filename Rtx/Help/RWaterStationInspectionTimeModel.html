@@ -1,0 +1,113 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Water Station Inspection Time Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Water Station Inspection Time Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RWaterStationInspectionTimeModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Water > Water Station Inspection Time</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+\[\begin{align}
+  & \tau =\left\{ \begin{matrix}
+   t & ; & \mu =\text{Visual}  \\
+   t/2 & ; & \mu =\text{Drone}  \\
+   0 & ; & \mu =\text{Sensor}  \\
+\end{matrix} \right. \\ 
+ & \varsigma =\left\{ \begin{matrix}
+   0 & ; & \mu =\text{Visual}  \\
+   0 & ; & \mu =\text{Drone}  \\
+   1 & ; & \mu =\text{Sensor}  \\
+\end{matrix} \right. \\ 
+\end{align}\]
+
+	<b>Note:</b> If the inspection time parameter is less than 0.1 day, i.e. \({t}\) &lt; 0.1, it is assumed to be 0, i.e.  \({t}\) = 0. The inspection time is then computed based on this modified value. <br>
+
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="WaterStationInformationModel">Water Station Information Model</h3>
+<ul>
+	<li>The associate Water Station information model</li>
+</ul>
+
+<h3 id="Monitoring">Monitoring</h3>
+<ul>
+	<li>\({\mu}\) = Monitoring method (Visual, Drone, Sensor)</li>
+</ul>
+
+<h3 id="InspectionTimeParameter">Inspection Time Parameter</h3>
+<ul>
+	<li>\({t}\) = Duration of visually inspecting the Water Station (input by user) </li>
+</ul>
+
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({\tau}\) = Duration of inspecting the Water Station</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;TimeResponse&rdquo;.
+	
+	<li>\({\varsigma}\) = Determines the status of inspection operation (1 if completed, 0 otherwise). Once the scheduled operation is completed, the status changes to 1</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;StatusResponse&rdquo;.
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

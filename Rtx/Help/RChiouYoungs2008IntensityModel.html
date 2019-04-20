@@ -1,0 +1,137 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Chiou Youngs 2008 Intensity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Chiou Youngs 2008 Intensity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RChiouYoungs2008IntensityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Intensity > Chiou Youngs 2008 Intensity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the spectral acceleration, peak ground acceleration, or peak ground velocity at specified locations for given magnitude and hypocenter location of several earthquake sources as input, based on the Chio-Youngs (2008) attenuation relation.</li>
+	<li>Depth of each earthquake is predicted based on the magnitude.</li>
+	<li>For more information, see <a href="#ChiouYoungs2008">Chiou-Youngs (2008)</a>.</li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MagnitudeList">Magnitude List</h3>
+<ul>
+	<li>Magnitudes of various earthquake sources</li>
+</ul>
+
+<h3 id="HypocentreLocationList">Hypocentre Location List</h3>
+<ul>
+	<li>Hypocenter locations of earthquake sources, which automatically will yield the radius \({R}\) to the various output locations.</li>
+</ul>
+
+<h3 id="EpsilonUncertaintyList">Epsilon Uncertainty List</h3>
+<ul>
+	<li>Intra-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="EtaUncertaintyList">Eta Uncertainty List</h3>
+<ul>
+	<li>Inter-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="Fault Types">Fault Types</h3>
+<ul>
+	<li>Fault mechanism that can either be NormalSlip, StrikeSlip, or ReverseSlip.</li>
+</ul>
+
+<h3 id="ShockType">Shock Type</h3>
+<ul>
+	<li>Shock type that can be either MainShock or AfterShock.</li>
+</ul>
+
+<h3 id="ResponseType">Response Type</h3>
+<ul>
+	<li>Type of the response than can either be \({S_a}\), \({PGA}\), or \({PGV}\).</li>
+</ul>
+
+<h3 id="PeriodList">Period List</h3>
+<ul>
+	<li>List of the natural periods at which the intensity is evaluated</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here)</li>
+</ul>
+
+<h3 id="ShearWaveVelocityList">Shear Wave Velocity List</h3>
+<ul>
+	<li>List of the shear wave velocities at specified locations</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>Earthquake intensities (as many as the locations provided in the input)</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="ChiouYoungs2008">Chiou, B.-J., & Youngs, R. R. (2008). An NGA model for the average horizontal component of peak ground motion and response spectra. Earthquake Spectra, 24(1), 173–215</li>
+</ul>
+
+</body>
+
+</html>

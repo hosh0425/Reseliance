@@ -1,0 +1,169 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Healthcare Capacity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Healthcare Capacity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RHealthcareCapacityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Healthcare > Healthcare Capacity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+\[{{\Gamma }_{abs}} + {{D}_N}=\left\{ \begin{matrix}
+   {{\Gamma }_{t}}\cdot \left( 1-{{d}_{\text{pwr}}}\cdot \left( 1-P \right) \right)\cdot \left( 1-{{d}_{\text{wtr}}}\cdot \left( 1-W \right) \right) & ; & {{\eta }_{S}}=0  \\
+   \left\{ \begin{matrix}
+   {{\Gamma }_{t}}\cdot \frac{r}{2} & ; & \text{before restoraion}  \\
+   {{\Gamma }_{t}}\cdot r & ; & \text{before repair}  \\
+   {{\Gamma }_{t}}\cdot \left( 1-{{d}_{\text{pwr}}}\cdot \left( 1-P \right) \right)\cdot \left( 1-{{d}_{\text{wtr}}}\cdot \left( 1-W \right) \right) & ; & \text{after repair}  \\
+\end{matrix} \right. & ; & {{\eta }_{S}}>0  \\
+\end{matrix} \right.\]
+
+<b>Important Notes: </b>
+	<li>The "potential capacity" response is the same as "absolute capacity" response with the difference that it is ascending during the recovery period.</li>
+	<li>The "available capacity" response is the same as "potential capacity" response with the difference that the post-hazard hospitalized injured people are subtracted from the potential capacity.</li>
+	<li>If it is desired that the capacity of the healthcare unit will be ascending during the recovery period, the "potential capacity" response must be used.</li>
+	<li>To consider the events of injuries treatment during the post-hazard period in Discrete Event Analyzer, the "available capacity" response must be used.</li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="HealthcareInformationModel">Healthcare Information Model</h3>
+<ul>
+	<li>The associate Healthcare information model</li>
+</ul>
+
+<h3 id="NormalDemand">Normal Demand</h3>
+<ul>
+	<li>\({D_N}\) = The hospitalization demand on the healthcare unit in normal condition</li>
+</ul>
+
+<h3 id="StructuralDamageRatio">Structural Damage Ratio</h3>
+<ul>
+	<li>\({\eta _S}\) = Structural Damage Ratio</li>
+</ul>
+
+<h3 id="NonstructuralDriftDamageRatio">Nonstructural Drift Damage Ratio</h3>
+<ul>
+	<li>\({\eta_{ND}}\) = Non-structural drift damage ratio </li>
+</ul>
+
+<h3 id="NonstructuralAccelerationDamageRatio">Nonstructural Acceleration Damage Ratio</h3>
+<ul>
+	<li>\({\eta_{NA}}\) = Non-structural drift damage ratio </li>
+</ul>
+
+<h3 id="ContentDamageRatio">Content Damage Ratio</h3>
+<ul>
+	<li>\({\eta_C}\) = Content damage ratio</li>
+</ul>
+
+<h3 id="RepairStatus">Repair Status</h3>
+<ul>
+	<li>\({\varsigma_{rep}}\) = Status of Repair operation of healthcare building (1 if completed, 0 otherwise)</li>
+</ul>
+
+<h3 id="RestorationStatus">Restoration Status</h3>
+<ul>
+	<li>\({\varsigma_{rst}}\) = Status of Restoration (1 if completed, 0 otherwise)</li>
+</ul>
+
+<h3 id="RecaptureFactor">Recapture Factor</h3>
+<ul>
+	<li>\({r}\) = recapture factor accounts for the fact that the business-related losses from earthquakes can be recouped to some extent by working overtime after the event (FEMA NIBS 2012)</li>
+</ul>
+
+<h3 id="PowerServiceability">Power Serviceability</h3>
+<ul>
+	<li>\({P}\) = The serviceability status of the upstream electricity provider </li>
+</ul>
+
+<h3 id="PowerDependency">Power Dependency</h3>
+<ul>
+	<li>\({d_{pwr}}\) = The dependency of the Healthcare unit on power</li>
+</ul>
+
+
+<h3 id="WaterServiceability">Water Serviceability</h3>
+<ul>
+	<li>\({W}\) = The serviceability status of the upstream water provider </li>
+</ul>
+
+<h3 id="WaterDependency">Water Dependency</h3>
+<ul>
+	<li>\({d_{wtr}}\) = The dependency of the Healthcare unit on Water</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>	
+	<li>\({R_{abs}}\) = The absolute revenue of the Healthcare unit in terms of number of beds</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;AbsoluteResponse&rdquo;.<br>
+	<b>Note: </b> The absolute capacity demonstrates the current capacity of the commercial unit based on its current condition. </li>
+	
+	<li>\({R_{pot}}\) = The potential capacity of the Healthcare unit in terms of number of beds</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;PotentialResponse&rdquo;.<br>
+	<b>Note: </b> The potential capacity features the condition that the capacity is ascending during the recovery period. </li>
+	
+	<li>\({R}\) = The available capacity of the Healthcare unit in terms of number of beds</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;AvailableResponse&rdquo;.<br>
+	<b>Note: </b> The available capacity features the condition that the post-hazard injured people are hospitalized and therefore, the serviceable capacity is reduced.</li>
+
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

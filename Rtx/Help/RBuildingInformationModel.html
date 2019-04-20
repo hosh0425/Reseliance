@@ -1,0 +1,210 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Building Information Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Building Information Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RBuildingInformationModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Building > Building Information</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model is a database of building information.</li>
+	<li>The model is passed to any other model that needs the building information.</li>
+	<li>For further information on this model, refer to <a href="#MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013)</a> and <a href="#MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013)</a>.</li>
+</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="Region">Region</h3>
+<ul>
+	<li>Region of the building (Iran, US)</li>
+</ul>
+
+<h3 id="Location">Location</h3>
+<ul>
+	<li>Location of the building</li>
+</ul>
+
+<h3 id="TimeOfConstruction">Time of Construction</h3>
+<ul>
+	<li>A time object signifying the construction time</li>
+</ul>
+
+<h3 id="ConstructionQuality">Construction Quality</h3>
+<ul>
+	<li>The quality of construction (Superior, Ordinary, or Inferior)</li>
+</ul>
+
+<h3 id="LoadBearingSystem">Load Bearing System</h3>
+<ul>
+	<li>List of the types of Load bearing systems</li>
+</ul>
+
+<h3 id="Material">Material</h3>
+<ul>
+	<li>List of the types of materials used in building construction</li>
+</ul>
+
+<h3 id="NumberOfStoreys">Number Of Storeys</h3>
+<ul>
+	<li>Number of storeys with the same storey area</li>
+</ul>
+
+<h3 id="HeightOfStoreys">Height Of Storeys</h3>
+<ul>
+	<li>Height of storeys with the same storey area</li>
+</ul>
+
+<h3 id="Footprint Area">Footprint Area</h3>
+<ul>
+	<li>Area of the storeys specified above</li>
+</ul>
+
+<h3 id="OccupancyType">Occupancy Type</h3>
+<ul>
+	<li>List of the building occupancy classifications</li>
+</ul>
+
+<h3 id="PlanShape">Plan Shape</h3>
+<ul>
+	<li>List of the types of plan shapes</li>
+</ul>
+
+<h3 id="PlanIrregularity">Plan Irregularity</h3>
+<ul>
+	<li>\({I_{PI}}\) = Plan irregularity</li>
+</ul>
+
+<h3 id="VerticalIrregularity">Vertical Irregularity</h3>
+<ul>
+	<li>\({I_{VI}}\) = Vertical irregularity</li>
+</ul>
+
+<h3 id="SoftStorey">Soft Storey</h3>
+<ul>
+	<li>\({I_{SS}}\) = Soft storey</li>
+</ul>
+
+<h3 id="Opening">Opening</h3>
+<ul>
+	<li>\({I_O}\) = Opening</li>
+</ul>
+
+<h3 id="ShortColumn">Short Column</h3>
+<ul>
+	<li>\({I_{SC}}\) = Short column</li>
+</ul>
+
+<h3 id="Pounding">Pounding</h3>
+<ul>
+	<li>\({I_{P}}\) = Pounding</li>
+</ul>
+
+<h3 id="Retrofitted">Retrofitted</h3>
+<ul>
+	<li>Determines whether the building is retrofitted or not.</li>
+</ul>
+
+<h3 id="Basement">Basement</h3>
+<ul>
+	<li>Determines whether there is a basement in building or not.</li>
+</ul>
+
+<h3 id="Balcony">Balcony</h3>
+<ul>
+	<li>Determines whether there is a balcony in building or not.</li>
+</ul>
+
+
+<h2>Read-only Properties</h2>
+
+<h3 id="Prototype">Prototype</h3>
+<ul>
+	<li>Prototype according to the chosen Load Bearing System and Material</li>
+</ul>
+
+<h3 id="CodeLevel">Code Level</h3>
+<ul>
+	<li>Code level adopted with the combination of properties</li>
+</ul>
+
+<h3 id="Height">Height</h3>
+<ul>
+	<li>The height of the building</li>
+</ul>
+
+<h3 id="TotalArea">Total Area</h3>
+<ul>
+	<li>Total area of the building</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not generate any responses.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part I: Models,” Structural Safety, 42, pp. 54-62 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.003">DOI</a>)</li>
+		<li id="MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part II: Analysis,” Structural Safety, 42, pp. 63-74 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.004">DOI</a>)</li>
+	</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Script Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Script Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RScriptModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Generic > Script</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model runs a user-written script in the language of JavaScript, which is based on ECMAscript.</li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>Yes</li>
+</ul>
+ 
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="InputParameterList">Input Parameter List</h3>
+<ul>
+	<li>List of parameters used in the script</li>
+</ul>
+
+<h3 id="ScriptFile">Script File</h3>
+<ul>
+	<li>Absolute or relative path to the location of the script file</li>
+</ul>
+
+<h3 id="DDM">DDM</h3>
+<ul>
+	<li>Indicator of whether the script file includes DDM implementations or not</li>
+	<li>The naming convention to return DDM sensitivities from a script model is d_response_d_input</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not automatically create any response objects.</li>
+	<li>Rather, creates Generic Response objects</li>
+	<li>In those objects, specify the name of the Script model.</li>
+	<li>The script should evaluate variables with the same name as these Generic Response objects.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h3 id="Debug">Debug</h3>
+<ul>
+	<li>Opens new window that provides basic tools to read and debug the script.</li>
+</ul>
+
+</body>
+
+</html>

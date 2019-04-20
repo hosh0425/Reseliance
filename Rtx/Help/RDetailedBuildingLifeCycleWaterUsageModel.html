@@ -1,0 +1,290 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Detailed Building Life Cycle Water Usage Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Detailed Building Life Cycle Water Usage Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RDetailedBuildingLifeCycleWaterUsageModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Environmental > Detailed Building Life Cycle Water Usage</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the lifecycle water usage in a building at a fine level of detail.</li>
+	<li>Extraction and manufacturing phase</li>
+	$${W_{EM}} = {W_P} + {W_t} = \sum {q{i_{wp}} + \sum {q{i_{wt}}d = \sum {q({i_{wp}} + {i_{wt}}d)} } } $$
+	<li>On-site construction phase</li>
+	$${W_{oc}} = {t_{wh}}{w_{ioc}}$$
+	<li>Operation phase</li>
+	$${W_{op}}= {t_d}{d_{yo}}{o_e}({i_{fl}}+{i_{mf}}{r_{mf}}+{i_{ff}}(1-{r_{mf}}))$$
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="ConcreteQuantity">Concrete Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of concrete including mortar and concrete 20MPa, whose units are converted to kg</li>
+</ul>
+
+<h3 id="ConcreteWIntensity">Concrete W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of concrete materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="ConcreteTransportationDistance">Concrete Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by concrete, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="ConcreteTransportationWIntensity">Concrete Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation water intensity of concrete materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="SteelQuantity">Steel Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of steel including nails, welded wire mesh, wide flange section, rebar, rod, light sections, sheet metal, whose units are converted to kg</li>
+</ul>
+
+<h3 id="SteelWIntensity">Steel W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of steel materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="SteelTransportationDistance">Steel Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by steel, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="SteelTransportationWIntensity">Steel Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation water intensity of steel materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="WoodQuantity">Wood Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of wood including small dimension lumber, softwood plywood, large dimension lumber , whose units are converted to kg</li>
+</ul>
+
+<h3 id="WoodWIntensity">Wood W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of wooden materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="WoodTransportationDistance">Wood Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by wood, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="WoodTransportationWIntensity">Wood Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation water intensity of wooden materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GypsumBoardQuantity">Gypsum Board Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of Gypsum board including Gypsum wall 0.5” and 0.625”, whose units are converted to kg</li>
+</ul>
+
+<h3 id="GypsumBoardWIntensity">Gypsum Board W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of Gypsum board defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GypsumBoardTransportationDistance">Gypsum Board Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by Gypsum board, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="GypsumBoardTransportationWIntensity">Gypsum Board Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation water intensity of Gypsum board defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="VapourBarrierQuantity">Vapour Barrier Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of vapor barrier including 6 mil polyethylene, EPDM membrane, whose units are converted to kg</li>
+</ul>
+
+<h3 id="VapourBarrierWIntensity">Vapour Barrier W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of vapor barrier defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="VapourBarrierTransportationDistance">Vapour Barrier Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by vapor barrier, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="VapourBarrierTransportationWIntensity">Vapour Barrier Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation water intensity of vapor barrier defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="InsulationQuantity">Insulation Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of insulation including batt fibreglass, brick, vinyl siding glazing, whose units are converted to kg</li>
+</ul>
+
+<h3 id="InsulationWIntensity">Insulation W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of insulation materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="InsulationTransportationDistance">Insulation Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by insulation, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="InsulationTransportationWIntensity">Insulation Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation water intensity of insulation materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GlassQuantity">Glass Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of glass including glazing panel, low E Tin Argon filled glazing, whose units are converted to kg</li>
+</ul>
+
+<h3 id="GlassWIntensity">Glass W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of glass materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GlassTransportationDistance">Glass Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by glass, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="GlassTransportationWIntensity">Glass Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation intensity of glass materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="OtherMaterialQuantity">Other Material Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of other materials including aluminum, whose units are converted to kg</li>
+</ul>
+
+<h3 id="OtherMaterialWIntensity">Other Material W Intensity</h3>
+<ul>
+	<li>\({i_{wp}}\) = The water intensity of other materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="OtherMaterialTransportationDistance">Other Material Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by the other materials, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="OtherMaterialTransportationWIntensity">OtherMaterial Transportation W Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation water intensity of other materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="WorkerHourWIntensity">Worker Hour W Intensity</h3>
+<ul>
+	<li>\({w_{ioc}}\) = The water intensity in L of water/worker hour</li>
+</ul>
+
+<h3 id="TotalWorkerHours">Total Worker Hours</h3>
+<ul>
+	<li>\({t_{wh}}\) = The total worker-hours required to complete construction activities</li>
+</ul>
+
+<h3 id="DaysYearlyOperation">Days Yearly Operation</h3>
+<ul>
+	<li>\({d_{yo}}\) = The days of yearly operation of the building. for example, if the building is operated only 200 out of 365 days in a given year, dyo is equal to 200 days per year</li>
+</ul>
+
+<h3 id="TotalBuildingOccupants">Total Building Occupants</h3>
+<ul>
+	<li>\({o_e}\) = The total number of building occupants</li>
+</ul>
+
+<h3 id="FlowFixture1WDemand">Flow Fixture 1 W Demand</h3>
+<ul>
+	<li>\({i_{fl}}\) = The water demand for each flow fixture in L/occupant/day</li>
+</ul>
+
+<h3 id="FlushMaleWDemand">Flush Male W Demand</h3>
+<ul>
+	<li>\({i_{mf}}\) = The daily water demand for male occupants for each flush fixture in L/male/day</li>
+</ul>
+
+<h3 id="FlushFemaleWDemand">Flush Female W Demand</h3>
+<ul>
+	<li>\({i_{ff}}\) = The daily water demand for female occupants for each flush fixture in L/female/day</li>
+</ul>
+
+<h3 id="RatioMaleOccupants">Ratio Male Occupants</h3>
+<ul>
+	<li>\({r_{mf}}\) = The ratio of male occupants to total building occupants: normally 0.5 males to total building occupants</li>
+</ul>
+
+<h3 id="DesignLife">Design Life</h3>
+<ul>
+	<li>\({t_d}\) = The design life of the building in years</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({W}\) = The lifecycle water usage in a building in L</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

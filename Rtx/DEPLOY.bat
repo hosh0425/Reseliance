@@ -1,0 +1,1 @@
+%QTDIR%\bin\windeployqt Rtx.exe

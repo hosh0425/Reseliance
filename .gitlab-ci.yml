@@ -1,0 +1,6 @@
+AutoWebPage:
+  stage: deploy
+  script:
+    - \cp -r Rtx/Help/* /var/www/html/
+  only:
+    - master

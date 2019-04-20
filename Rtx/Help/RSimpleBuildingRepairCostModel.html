@@ -1,0 +1,111 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Simple Building Repair Cost Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Simple Building Repair Cost Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RSimpleBuildingRepairCostModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Economic > Simple Building Repair Cost</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	$$l = \eta  \cdot N \cdot A \cdot C + \varepsilon $$
+	<b>Important Notes: </b>
+	<li>The cost of repair operation is computed once it is completed (i.e. the repair status changes to 1), otherwise it is 0.</li>
+	<li>To use this model in analyzers other than Discrete Event Sampling Anlyzer, the "RepairStatus" property must be a constant parameter with current value of 1</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>Yes</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="DamageFactor">Damage Factor</h3>
+<ul>
+	<li>\({\eta}\) = Damage ratio, typically between 0 and 1</li>
+</ul>
+
+<h3 id="NumberOfStoreys">Number Of Stories</h3>
+<ul>
+	<li>\({N}\) = Number of storeys (given as an integer)</li>
+</ul>
+
+<h3 id="FootprintArea">Footprint Area</h3>
+<ul>
+	<li>\({A}\) = Footprint area of the building (given as a real number)</li>
+</ul>
+
+<h3 id="UnitAreaCost">Unit Area Cost</h3>
+<ul>
+	<li>\({C}\) = Cost of repair per unit area, perhaps around $2,000/m<sup>2</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = Model error</li>
+</ul>
+
+<h3 id="RepairStatus">Repair Status</h3>
+<ul>
+	<li>\({\varsigma}\) = Status of Repair operation (1 if completed, 0 otherwise)</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({l}\) = Loss due to the repair Cost</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

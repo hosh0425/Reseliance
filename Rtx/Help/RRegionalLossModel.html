@@ -1,0 +1,183 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>RRegionalLossModel</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Regional Loss</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RRegionalLossModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Economic > Regional Loss</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	$$l = \left( {\sum\limits_{k = 1}^K {{\eta _k} \cdot {A_k} \cdot {C_k}} } \right) \cdot \exp \left( { - r \cdot t} \right)$$
+	$$\ln \left( {{\eta _k}} \right) = \ln \left[ {{\vartheta _{1k}} \cdot \Phi \left( {{\vartheta _{2k}} \cdot Sa_2^{{\vartheta _{5k}}} + {\vartheta _{3k}} \cdot Sa_1^{{\vartheta _{5k}}} - {\vartheta _{4k}}} \right)} \right] + {\varepsilon _k}$$
+
+	<li>For further information on this model, refer to <a href="#MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013)</a> and <a href="#MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013)</a>.</li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="BoundaryLocationList">Boundary Location List</h3>
+<ul>
+	<li>List of location objects of the corner points of the region</li>
+</ul>
+
+<h3 id="CentroidLocation">Centroid Location</h3>
+<ul>
+	<li>A location object that will take the region’s centroid coordinates.</li>
+</ul>
+
+<h3 id="Sa1">Sa 1</h3>
+<ul>
+	<li>\({S_{a_1}}\) = 5%-damped elastic spectral acceleration at the period of 1.0s at the region’s centroid.</li>
+</ul>
+
+<h3 id="Sa2">Sa 2</h3>
+<ul>
+	<li>\({S_{a_2}}\) = 5%-damped elastic spectral acceleration at the period of 0.3s at the region’s centroid.</li>
+</ul>
+
+<h3 id="UnitAreaCostList">Unit Area Cost List</h3>
+<ul>
+	<li>\({C_k}\) = Unit area cost list for different zones within the region.</li>
+</ul>
+
+<h3 id="AreaRatioList">Area Ratio List</h3>
+<ul>
+	<li>\({A_k}\) = Area ratio list, that is the ratio of different zone areas to the total area of the region.</li>
+</ul>
+
+<h3 id="Time">Time</h3>
+<ul>
+	<li>\({t}\) = Time object</li>
+</ul>
+
+<h3 id="AnnualInterestRate">Annual Interest Rate</h3>
+<ul>
+	<li>\({r}\) = Annual Interest Rate</li>
+</ul>
+
+<h3 id="Theta1List">Theta 1 List</h3>
+<ul>
+	<li>\({\vartheta_{1k}}\) = List of \({\vartheta_{1}}\) model parameters for different zones within the region.</li>
+</ul>
+
+<h3 id="Theta2List">Theta 2 List</h3>
+<ul>
+	<li>\({\vartheta_{2k}}\) = List of \({\vartheta_{2}}\) model parameters for different zones within the region.</li>
+</ul>
+
+<h3 id="Theta3List">Theta 3 List</h3>
+<ul>
+	<li>\({\vartheta_{3k}}\) = List of \({\vartheta_{3}}\) model parameters for different zones within the region.</li>
+</ul>
+
+<h3 id="Theta4List">Theta 4 List</h3>
+<ul>
+	<li>\({\vartheta_{4k}}\) = List of \({\vartheta_{4}}\) model parameters for different zones within the region.</li>
+</ul>
+
+<h3 id="Theta5List">Theta 5 List</h3>
+<ul>
+	<li>\({\vartheta_{5k}}\) = List of \({\vartheta_{5}}\) model parameters for different zones within the region.</li>
+</ul>
+
+<h3 id="EpsilonList">Epsilon List</h3>
+<ul>
+	<li>\({\varepsilon_{k}}\) = List of \({\varepsilon}\) model error for different zones within the region.</li>
+</ul>
+
+<h3 id="Color">Color</h3>
+<ul>
+	<li>Color of the region on Google Maps</li>
+</ul>
+
+<h3 id="TotalArea">Total Area</h3>
+<ul>
+	<li>Total Area of the region</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({I}\) = Total regional loss due to repair cost of buildings.</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h3 id="DisplayOnMap">Display On Map</h3>
+<ul>
+	<li>Displays the object on map.</li>
+</ul>
+
+<h3 id="RemoveFromMap">Remove From Map</h3>
+<ul>
+	<li>Removes the object from map.</li>
+</ul>
+
+<h3 id="DisplayLocationsInside">Display Locations Inside</h3>
+<ul>
+	<li>///</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part I: Models,” Structural Safety, 42, pp. 54-62 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.003">DOI</a>)</li>
+		<li id="MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part II: Analysis,” Structural Safety, 42, pp. 63-74 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.004">DOI</a>)</li>
+	</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Curtain Wall Damage Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Curtain Wall Damage Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RCurtainWallDamageModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Economic > Curtain Wall Damage</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	This model predicts damage ratio in Curtain Wall:
+
+	$$ \eqalign{ 
+	&{\Phi^{-1}}(\eta) = \cr
+	& - 0.007d + 4.117(ln(1+d)-0.17276d) \cr
+	& + 0.12({I_{AIGU}}+0.812({I_{IGU}}-0.62(\ln(1+d)-0.17276d))) \cr
+	& - 0.825({I_{mon}}+1.0214({I_{AIGU}}+0.812({I_{IGU}}-0.62(\ln(1+d)-0.17276d)))) \cr
+	& - 0.47(\ln(\delta)+6.393({I_{mon}}+1.0214({I_{AIGU}}+0.812({I_{IGU}}-0.62(\ln(1+d)-0.17276d))))) \cr
+	& + {\theta_1}.({I_{lam}}-0.688(\ln(\delta)+6.393({I_{mon}}+1.0214({I_{AIGU}}+0.812({I_{IGU}}-0.62(\ln(1+d)-0.17276d)))))) \cr
+	& + {\epsilon \cdot \sigma} }$$
+
+    <li>For further information on this model, refer to <a href="#AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019)</a> and <a href="#AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018)</a>. </li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+
+<h3 id="GlassToFrameClearance">Glass to Frame Clearance </h3>
+<ul>
+	<li>\(d\) = Glass to frame clearance</li>
+</ul>
+
+
+
+
+<h3 id="LaminatedGlass"> Laminated Glass </h3>
+<ul>
+	<li>\({I_{lam}}\) = Unity if the glass is laminated and zero otherwise </li>
+</ul>
+
+
+    <h3 id="GlassType">Glass Type </h3>
+    <ul>
+        <li>\({I_{IGU}}\) = Unity if the glass is IGU and zero otherwise </li>
+        <li>\({I_{AIGU}}\) = Unity if the glass is AIGU and zero otherwise </li>
+        <li>\({I_{mon}}\) = Unity if the glass is monolithic and zero otherwise </li>
+    </ul>
+
+
+
+<h3 id="InterstoryDriftRatio">Inter-story Drift Ratio</h3>
+<ul>
+	<li>\({\delta}\) = Inter-story drift ratio</li>
+</ul>
+
+<h3 id="Theta1">Theta1</h3>
+<ul>
+	<li>\({\theta_1}\) = Model parameter</li>
+</ul>
+
+<h3 id="Sigma">Sigma</h3>
+<ul>
+	<li>\({\sigma}\) = Standard deviation of the model error</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = model error; a standard normal random variable</li>
+</ul>
+
+
+
+<h2>Output (Automatically generated generic response object)</h2>
+<ul>
+	<li>\({\eta}\) = Damage ratio </li>
+
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+    <h2>References</h2>
+    <ul>
+        <li id="AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019) “Component damage models for detailed seismic risk analysis using structural reliability methods,” Structural Safety, 76, pp. 108-122 (<a href="https://doi.org/10.1016/j.strusafe.2018.08.004">DOI</a>)</li>
+        <li id="AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018) “Detailed seismic risk analysis of buildings using structural reliability methods,” Probabilistic Engineering Mechanics, 53, pp. 23-38 (<a href="https://doi.org/10.1016/j.probengmech.2018.04.001">DOI</a>)</li>
+    </ul>
+
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>St Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>St Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RStModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > St</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This is a 3D linear elastic structural analysis program with truss, frame, and 2D element.</li>
+	<li>All elements can be placed in any orientation in space.</li>
+	<li>For more details, please see the webpage on St linked at the Rtx page.</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<img src="images/StMenu.JPG" alt=""/>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane</li>
+</ul>
+
+<h3 id="StInputFile">St Input File</h3>
+<ul>
+	<li>St Input File = the absolute path to the structural model.</li>
+	<li>This file should be pre-checked by running St first.</li>
+	<li>A note on the use of Parameters: In St the Constant Parameter is available and can be used to give the value of material, geometry, and load variables.</li>
+	<li>When running the structural analysis as a model in Rt, these input parameters can be random variables, decision variables, or even responses from other models.</li>
+	<li>To do this, create those parameters in Rtx BEFORE you give the St Input File path. Use the same names of the random variables, etc as the parameter names used in the St input file.</li>
+</ul>
+
+<h3 id="Responses">Responses</h3>
+<ul>
+	<li>List of responses, for example:</li>
+	<p>Node2.YDisplacementResult ;  Element5.End2ZZMomentResult</p>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>Response objects corresponding to the list provided in the last item of the input</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h3 id="Display">Display</h3>
+<ul>
+	<li>Displays the object.</li>
+</ul>
+
+</body>
+
+</html>

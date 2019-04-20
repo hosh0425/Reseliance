@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Discrete Event Sampling Analyzer</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Discrete Event Sampling Analyzer</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RDiscreteEventSamplingAnalyzer</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Methods > Analyzer > Discrete Event Sampling</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="OutputDisplayLevel">Output Display Level</h3>
+<ul>
+	<li>Determines the level of messages and outputs of this object to print in the Output Pane. </li>
+	<li>The higher the level of outputs, the more time it takes to run the analysis.</li>
+	<li>The &ldquo;None&rdquo; option, prints nothing. </li>
+	<li>The &ldquo;Minimum&rdquo; option, prints the finish time of the current event and the function values. </li>
+	<li>The &ldquo;Moderate&rdquo; option, prints the finish time of the current event, the updated parameters, and the function values. </li>
+	<li>The &ldquo;Maximum&rdquo; option,  prints the finish and start time of the current event, the updated parameters, and the function values </li>
+</ul>
+
+<h3 id="DisplayDiagrams">Display Diagrams</h3>
+<ul>
+	<li>Determines whether the output is allowed to plot diagrams. If "True", four different types of diagrams are generated. </li>
+	<li>Note: This property is automatically turned off and set to false for multi-threaded analysis, i.e. no diagram is plotted.</li>
+</ul>
+
+<h3 id="FunctionEstimationInterval">Function Estimation Interval</h3>
+<ul>
+	<li>The interval (in days) which the function values are reported on. For example, if the interval is 7 days, the function values are reported on days 7, 14, 21, and so on. </li>
+</ul>
+
+<h3 id="RandomNumberGenerator">Random Number Generator</h3>
+<ul>
+	<li>The defined random number generator</li>
+</ul>
+
+<h3 id="Transformer">Transformer</h3>
+<ul>
+	<li>Indicates the transformer object which transforms random variables in original space to the standard normal space or vice versa</li>
+</ul>
+
+<h3 id="Accumulator">Accumulator</h3>
+<ul>
+	<li>The defined accumulator</li>
+</ul>
+
+<h3 id="FunctionList">Function List</h3>
+<ul>
+	<li>List of defined functions to analyze</li>
+</ul>
+
+<h3 id="FunctionAccumulationTypeList">Function Accumulation Type List</h3>
+<ul>
+	<li>Determines the generated output files, containing the time history information of the PDF and CDF of the Incremental and Cumulative values of functions. </li>
+	<li>The &ldquo;0&rdquo; option, no output file is generated. </li>
+	<li>The &ldquo;1&rdquo; option, two output files are generated for each function, containing the time history information of the PDF and CDF of the incremental values of functions. </li>
+	<li>The &ldquo;2&rdquo; option, two output files are generated for each function, containing the time history information of the PDF and CDF of the cumulative values of functions. </li>
+	<li>The &ldquo;3&rdquo; option, four output files are generated for each function, containing the time history information of the PDF and CDF of the incremental and cumulative values of functions.</li>
+	
+</ul>
+
+<h3 id="OccurrenceModelList">Occurrence Model List</h3>
+<ul>
+	<li>List of defined occurrence models</li>
+	<li>For each sample, one hazard is selected and others are turned off. This selection is based of the occurrence rate of the hazards. </li>
+</ul>
+
+<h3 id="EventModelList">Event Model List</h3>
+<ul>
+	<li>List of defined event models</li>
+</ul>
+
+<h3 id="TimeParameter">Time Parameter</h3>
+<ul>
+	<li>Time object.</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>The cumulative values of functions at the end of the simulation.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h3 id="RunAnalysis">Run Analysis</h3>
+<ul>
+	<li>Runs the scenario sampling analyzer.</li>
+</ul>
+
+</body>
+
+</html>

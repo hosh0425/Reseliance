@@ -1,0 +1,96 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Water Station Repair Time Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Water Station Repair Time Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RWaterStationRepairTimeModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Water > Water Station Repair Time</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the repair time of a Water Station, \({\tau}\), subjected to ground shaking based on the HAZUS (FEMA-NIBS 2012) approach. </li>
+	<b>Note:</b> If the repair time of a Water Station is less than one day, i.e. \({\tau}\) &lt; 1, it is assumed to be 0, i.e.  \({\tau}\) = 0. <br>
+	
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="WaterStationInformationModel">Water Station Information Model</h3>
+<ul>
+	<li>The associate Water Station information model</li>
+</ul>
+
+<h3 id="DamageRatio">Damage Ratio</h3>
+<ul>
+	<li>\({\eta}\) = Damage Ratio</li>
+</ul>
+
+<h3 id="RepairTimeUncertainty">Repair Time Uncertainty</h3>
+<ul>
+	<li>A standard normal random variable, i.e. N(0,1), which captures the uncertainty in repair time for a damage ratio.</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({\tau}\) = Duration of the repair of the Water Station</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.
+
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

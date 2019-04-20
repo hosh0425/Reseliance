@@ -1,0 +1,165 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Commercial Loss Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Commercial Loss Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RCommercialLossModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Commercial > Commercial Loss</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+\[\begin{align}
+  & {{R}_{abs}}=\left\{ \begin{matrix}
+   {{R}_{N}}\cdot \left( 1-{{d}_{\text{pwr}}}\cdot \left( 1-P \right) \right)\cdot \left( 1-{{d}_{\text{wtr}}}\cdot \left( 1-W \right) \right)\text{ } & ; & {{\eta }_{S}}=0 & {} & {}  \\
+   \left\{ \begin{matrix}
+   {{R}_{N}}\cdot r\cdot \left( 1-{{d}_{\text{bldg}}} \right) & ; & \text{before restoraion}  \\
+   {{R}_{N}}\cdot r & ; & \text{before repair}  \\
+   {{R}_{N}}\cdot \left( 1-{{d}_{\text{pwr}}}\cdot \left( 1-P \right) \right)\cdot \left( 1-{{d}_{\text{wtr}}}\cdot \left( 1-W \right) \right) & ; & \text{after repair}  \\
+\end{matrix} \right. & ; & {{\eta }_{S}}>0 & {} & {}  \\
+\end{matrix} \right. \\ 
+ &  \\ 
+\end{align}\]
+$$l=\left( {{R}_{N}}-{{R}_{abs}} \right)\cdot t$$
+
+<b>Important Notes: </b>
+	<li>The "potential revenue" response is the same as "absolute revenue" response with the difference that it is ascending during the recovery period.</li>
+	<li>If it is desired that the revenue of the commercial unit will be ascending during the recovery period, the "potential revenue" response must be used.</li>
+	<li>To use this model in analyzers other than Discrete Event Sampling Anlyzer, the "loss" response and "absolute revenue" response must be used.</li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="CommercialInformationModel">Commercial Information Model</h3>
+<ul>
+	<li>The associate commercial information model</li>
+</ul>
+
+<h3 id="NormalDailyRevenue">Normal Daily Revenue</h3>
+<ul>
+	<li>\({R_N}\) = The daily revenue of the commercial unit in normal condition</li>
+</ul>
+
+<h3 id="StructuralDamageRatio">Structural Damage Ratio</h3>
+<ul>
+	<li>\({\eta _S}\) = Structural Damage Ratio</li>
+</ul>
+
+<h3 id="BuildingRepairStatus">Building Repair Status</h3>
+<ul>
+	<li>\({\varsigma_{rep}}\) = Status of Repair operation (1 if completed, 0 otherwise)</li>
+</ul>
+
+<h3 id="BuildingDependency">Building Dependency</h3>
+<ul>
+	<li>\({d_{bldg}}\) = The dependency of the commercial unit on the serviceability of its building</li>
+</ul>
+
+<h3 id="BuildingRestorationStatus">Building Restoration Status</h3>
+<ul>
+	<li>\({\varsigma_{rst}}\) = Status of Restoration (1 if completed, 0 otherwise)</li>
+</ul>
+
+<h3 id="RecaptureFactor">Recapture Factor</h3>
+<ul>
+	<li>\({r}\) = recapture factor accounts for the fact that the business-related losses from earthquakes can be recouped to some extent by working overtime after the event (FEMA NIBS 2012)</li>
+</ul>
+
+<h3 id="PowerServiceability">Power Serviceability</h3>
+<ul>
+	<li>\({P}\) = The serviceability status of the upstream electricity provider </li>
+</ul>
+
+<h3 id="PowerDependency">Power Dependency</h3>
+<ul>
+	<li>\({d_{pwr}}\) = The dependency of the commercial unit on power</li>
+</ul>
+
+
+<h3 id="WaterServiceability">Water Serviceability</h3>
+<ul>
+	<li>\({W}\) = The serviceability status of the upstream water provider </li>
+</ul>
+
+<h3 id="WaterDependency">Water Dependency</h3>
+<ul>
+	<li>\({d_{wtr}}\) = The dependency of the commercial unit on Water</li>
+</ul>
+
+<h3 id="TimeParameter">Time Parameter</h3>
+<ul>
+	<li>\({t}\) = Time object</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({l}\) = The income loss of the commercial unit</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;LossResponse&rdquo;.
+	
+	<li>\({R_{abs}}\) = The absolute revenue of the commercial unit</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;AbsoluteRevenueResponse&rdquo;.<br>
+	<b>Note: </b> The absolute revenue demonstrates the current revenue of the commercial unit based on its current condition. </li>
+	
+	<li>\({R}\) = The potential revenue of the commercial unit</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;PotentialRevenueResponse&rdquo;.<br>
+	<b>Note: </b> The potential revenue features the condition that the revenue is ascending during the recovery period. </li>
+
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

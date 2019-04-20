@@ -1,0 +1,126 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Building Casualty Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Building Casualty Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RBuildingCasualtyModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Building > Building Casualty</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the number of uninjured, injured, and dead people of a building, subjected to ground shaking based on the HAZUS (FEMA-NIBS 2012) approach. </li>
+	<b>Important Notes: </b>
+	<li>The injury severity levels of 1,2, and 3 in HAZUS are combined into one injury severity level, named "Injured". </li>
+	<li>The injury severity levels of 0 and 4 are corresponded to injury severity levels of "Uninjured" and "Dead" respectively. </li>
+	<li>If the rescue operation is not completed yet, the "Rescued" responses, i.e. \({\rho_{RU}}\), \({\rho_{RI}}\), and \({\rho_{RD}}\), are 0 </li>
+	<li>Once the rescue operation is completed, the "Unrescued" responses, i.e. \({\rho_{UU}}\), \({\rho_{UI}}\), and \({\rho_{UD}}\), are set to 0 </li>
+	<li>The ouput of this model is based on the location of the building.</li>
+	<li>To use this model in analyzers other than Discrete Event Sampling Anlyzer, the "RescueStatus" property must be a constant parameter with current value of 1. Moreover, the rescued responses must be used. </li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="BuildingInformationModel">Building Information Model</h3>
+<ul>
+	<li>The associate building information model</li>
+</ul>
+
+<h3 id="Population">Population</h3>
+<ul>
+	<li>\(\rho\) = the total number of occupants of the building</li>
+</ul>
+
+<h3 id="BuildingType">Building Type</h3>
+<ul>
+	<li>\({B}\) = Building type per HAZUS (FEMA-NIBS 2012)</li>
+</ul>
+
+<h3 id="StructuralDamageRatio">Structural Damage Ratio</h3>
+<ul>
+	<li>\({\eta _S}\) = Structural Damage Ratio</li>
+</ul>
+
+<h3 id="RescueStatus">Rescue Status</h3>
+<ul>
+	<li>\({\varsigma}\) = Status of Search And Rescue operation (1 if completed, 0 otherwise)</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({\rho_{UU}}\) = The number of uninjured occupants who are not yet rescued</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;UnrescuedUninjuredResponse&rdquo;.
+		
+	<li>\({\rho_{UI}}\) = The number of injured occupants who are not yet rescued</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;UnrescuedInjuredResponse&rdquo;.	
+		
+	<li>\({\rho_{UD}}\) = The number of dead occupants who are not yet rescued</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;UnrescuedDeadResponse&rdquo;.
+	
+	<li>\({\rho_{RU}}\) = The number of uninjured occupants who are rescued</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;RescuedUninjuredResponse&rdquo;.
+		
+	<li>\({\rho_{RI}}\) = The number of injured occupants who are rescued</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;RescuedInjuredResponse&rdquo;.	
+		
+	<li>\({\rho_{RD}}\) = The number of dead occupants who are rescued</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;RescuedDeadResponse&rdquo;.
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

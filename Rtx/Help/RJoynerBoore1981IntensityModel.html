@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Joyner Boore 1981 Intensity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Joyner Boore 1981 Intensity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RJoynerBoore1981IntensityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Intensity > Joyner Boore 1981 Intensity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the peak ground acceleration at specified locations for given magnitude and hypocentre location input, based on the Joyner-Boore (1981) attenuation relation.</li>
+	$$PGA = {10^{ - 1.02\alpha  + 0.249\beta  \cdot M - {{\log }_{10}}(R) + b \cdot R + 0.26\varepsilon }}$$
+	where \({R}\)= radius
+	<li>For more information, see <a href="#JoynerBoore1981">Joyner-Boore (1981).</a></li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>Yes</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="Magnitude">Magnitude</h3>
+<ul>
+	<li>\({M}\) = Magnitude</h3>
+</ul>
+
+<h3 id="Alpha">Alpha</h3>
+<ul>
+	<li>\({\alpha}\) = 1, typically a normal random variable with unit mean.</li>
+</ul>
+
+<h3 id="Beta">Beta</h3>
+<ul>
+	<li>\({\beta}\) = 1, typically a normal random variable with unit mean.</li>
+</ul>
+
+<h3 id="B">B</h3>
+<ul>
+	<li>B = 1, typically a normal random variable with unit mean.</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = Model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="HypocentreLocation">Hypocentre Location</h3>
+<ul>
+	<li>Location of the hypocenter, which automatically will yield the radius \({R}\) to the various output locations.</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here).</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({PGA}\) = peak ground accelerations (as many as the locations provided in the input)</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="JoynerBoore1981">Boore, D. M., & Joyner, W. B. (1982). The empirical prediction of ground motion. Bulletin of the Seismological Society of America, 72(6B), S43–S60</li>
+</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Detailed Building Life Cycle GWP Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Detailed Building Life Cycle Global Warming Potential Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RDetailedBuildingLifeCycleGWPModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Environmental > Detailed Building Life Cycle Global Warming Potential</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the lifecycle global warming potential of a building at a fine level of detail.</li>
+	<li>Extraction and manufacturing phase</li>
+	$$GW{P_{EM}} = q\sum {{i_{gp}} + {i_{gt}}d} $$
+	<li>On-site construction phase</li>
+	$$GW{P_{OC}} = {E_{OC}}{i_{gc}}$$
+	<li>Operation phase</li>
+	$$GW{P_{OP}} = {E_{OP}}{i_{go}}$$
+	<li>End-of-life phase</li>
+	$$GW{P_{EoL}} = {E_{eoL}}{i_{geol}}$$
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="ConcreteQuantity">Concrete Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of concrete including mortar and concrete 20MPa, which units are converted to kg</li>
+</ul>
+
+<h3 id="ConcreteGWPIntensity">Concrete GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of concrete materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="ConcreteTransportationDistance">Concrete Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by concrete, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="ConcreteTransportationGWPIntensity">Concrete Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gt}}\) = Transportation GWP intensity of concrete materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="SteelQuantity">Steel Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of steel including nails, welded wire mesh, wide flange section, rebar, rod, light sections, sheet metal, which units are converted to kg</li>
+</ul>
+
+<h3 id="SteelGWPIntensity">Steel GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of steel materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="SteelTransportationDistance">Steel Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by steel, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="SteelTransportationGWPIntensity">Steel Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gt}}\) = Transportation GWP intensity of steel materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="WoodQuantity">Wood Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of wood including small dimension lumber, softwood plywood, large dimension lumber , whose units are converted to kg</li>
+</ul>
+
+<h3 id="WoodGWPIntensity">Wood GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of wooden materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="WoodTransportationDistance">Wood Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by wood, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="WoodTransportationGWPIntensity">Wood Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gt}}\) = Transportation GWP intensity of wooden materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GypsumBoardQuantity">Gypsum Board Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of Gypsum board including Gypsum wall 0.5” and 0.625”, whose units are converted to kg</li>
+</ul>
+
+<h3 id="GypsumBoardGWPIntensity">Gypsum Board GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of Gypsum board defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GypsumBoardTransportationDistance">Gypsum Board Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by Gypsum board, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="GypsumBoardTransportationGWPIntensity">Gypsum Board Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gt}}\) = Transportation GWP intensity of Gypsum board defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="VapourBarrierQuantity">Vapour Barrier Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of vapor barrier including 6 mil polyethylene, EPDM membrane, whose units are converted to kg</li>
+</ul>
+
+<h3 id="VapourBarrierGWPIntensity">Vapour Barrier GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of vapor barrier defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="VapourBarrierTransportationDistance">Vapour Barrier Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by vapor barrier, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="VapourBarrierTransportationGWPIntensity">Vapour Barrier Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gt}}\) = Transportation GWP intensity of vapor barrier defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="InsulationQuantity">Insulation Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of insulation including batt fibreglass, brick, vinyl siding glazing, whose units are converted to kg</li>
+</ul>
+
+<h3 id="InsulationGWPIntensity">Insulation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of insulation materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="InsulationTransportationDistance">Insulation Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by insulation, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="InsulationTransportationGWPIntensity">Insulation Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gt}}\) = Transportation GWP intensity of insulation materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GlassQuantity">Glass Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of glass including glazing panel, low E Tin Argon filled glazing, whose units are converted to kg</li>
+</ul>
+
+<h3 id="GlassGWPIntensity">Glass GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of glass materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GlassTransportationDistance">Glass Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by glass, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="GlassTransportationGWPIntensity">Glass Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{gt}}\) = Transportation intensity of glass materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="OtherMaterialQuantity">Other Material Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of other materials including aluminum, whose units are converted to kg</li>
+</ul>
+
+<h3 id="OtherMaterialGWPIntensity">Other Material GWP Intensity</h3>
+<ul>
+	<li>\({i_{gp}}\) = The GWP intensity of the other material defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="OtherMaterialTransportationDistance">Other Material Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by the other material, including backhaul, defined as a random variable, in km</li>
+</ul>
+
+<h3 id="OtherMaterialTransportationGWPIntensity">OtherMaterial Transportation GWP Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = Transportation GWP intensity of the other material defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="EnergyConstruction">Energy Construction</h3>
+<ul>
+	<li>\({E_{oc}}\) = The energy used during on-site construction in J</li>
+</ul>
+
+<h3 id="GWPIntensityEnergyConstruction">GWP Intensity Energy Construction</h3>
+<ul>
+	<li>\({i_{gc}}\) = The GWP intensity of the on-site construction phase in kgCO2e/J</li>
+</ul>
+
+<h3 id="AnnualEnergyOperation">Annual Energy Operation</h3>
+<ul>
+	<li>\({E_{op}}\) = The total energy used during building operation phase in J</li>
+</ul>
+
+<h3 id="DesignLife">DesignLife</h3>
+<ul>
+	<li>\({t_d}\) = The design life of the building in years</li>
+</ul>
+
+<h3 id="GWPIntensityOperation">GWP Intensity Operation</h3>
+<ul>
+	<li>\({i_{go}}\) = The GWP intensity of the energy used during the building operation stage in kgCO2e/J</li>
+</ul>
+
+<h3 id="EOLEnergy">EOL Energy</h3>
+<ul>
+	<li>\({E_{eol}}\) = The total energy used during end of life phase in J</li>
+</ul>
+
+<h3 id="GWPIntensityEOL">GWP Intensity EOL</h3>
+<ul>
+	<li>\({i_{geol}}\) = The GWP intensity of the energy used during the end of life stage in kgCO2e/J</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({E_{GWP}}\) = The lifecycle energy usage in a building regarded to global warming potential in J</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

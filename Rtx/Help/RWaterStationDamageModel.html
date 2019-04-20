@@ -1,0 +1,101 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Water Station Damage Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Water Station Damage Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RWaterStationDamageModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Water > Water Station Damage</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the damage ratio and damage state for a Water station, subjected to the ground shaking based on the fragility curves provided by HAZUS (FEMA-NIBS 2012) approach.</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="WaterStationInformationModel">Water Station Information Model</h3>
+<ul>
+	<li>The associate Water Station information model</li>
+</ul>
+
+<h3 id="Intensity">Intensity</h3>
+<ul>
+	<li>Peak Ground Acceleration (PGA) at the Water station site</li>
+</ul>
+
+<h3 id="DamageStateUncertainty">Damage State Uncertainty</h3>
+<ul>
+	<li>A standard normal random variable, i.e. N(0,1), which captures the uncertainty in damage state for a PGA.</li>
+</ul>
+
+<h3 id="DamageRatioUncertainty">Damage Ratio Uncertainty</h3>
+<ul>
+	<li>A standard normal random variable, i.e. N(0,1), which captures the uncertainty in damage ratio for a damage state.</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({d}\) = Damage state of the Water station</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;StateResponse&rdquo;.
+	
+	<li>\({\eta}\) = Damage ratio of the Water station</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;RatioResponse&rdquo;.
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

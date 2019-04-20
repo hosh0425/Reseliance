@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Armijo Step Size Searcher</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Armijo Step Size Searcher</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RArmijoStepSizeSearcher</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Methods > Step Size Searcher > Armijo</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<img src="images/armijomenu.JPG" alt=""/>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="OutputDisplayLevel">Output Display Level</h3>
+<ul>
+	<li>Determines the level of messages and outputs of this object to print in the Output Pane.</li>
+	<li>The higher the level of outputs, the more time it takes to run the analysis.</li>  
+</ul>
+
+<h3 id="Transformer">Transformer</h3>
+<ul>
+	<li>Indicates the transformer object which transforms random variables in original space to the standard normal space or vice versa.</li>
+</ul>
+
+<h3 id="MeritChecker">Merit Checker</h3>
+<ul>
+	<li>Determines the merit checker function to guide the length of steps in a sequence of iteration points to the design point, in a balanced manner. </li>
+</ul>
+
+<h3 id="MaximumReductions">Maximum Reductions</h3>
+<ul>
+	<li>Determines the maximum number of reductions apllied to length of steps.</li>
+</ul>
+
+<h3 id="Base">Base</h3>
+<ul>
+	<li>Determines the coefficient to reduce the length of steps.</li>
+</ul>
+
+<h3 id="InitialStepSize">Initial Step Size</h3>
+<ul>
+	<li>Determines the initial step size, typically 0.5 to 1.</li>
+</ul>
+
+<h3 id="InitialStepsCount">Initial Steps Count</h3>
+<ul>
+	<li>Determines the maximum number of steps using initial steps, typically 2.</li>
+</ul>
+
+<h3 id="SphereRadius">Sphere Radius</h3>
+<ul>
+	<li>The radius of an initial hyper-sphere, within which the trial point is restricted to stay, typically set as R=50.0. This choice depends on the expected reliability index.</li>
+</ul>
+
+<h3 id="SphereDistance">Sphere Distance</h3>
+<ul>
+	<li>Distance of hyper-sphere surface which trial points are checked with, typically set as 0.1.</li>
+</ul>
+
+<h3 id="SphereEvolution">Sphere Evolution</h3>
+<ul>
+	<li>Since the design point may not be located inside the hyper-sphere, the radius may need to be increased,the radius is increased by the amount specified by the Evolution parameter, typically set as 0.5</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>This object guides the length of steps in a sequence of iteration points to the design point, in a balanced manner.</li>
+	<li>For more information, see <a href="#DerKiureghianZhang1994">Der Kiureghian-Zhang (1994).</a></li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="DerKiureghianZhang1994">Der Kiureghian, A., Zhang, Y., & Li, C.-C. (1994). Inverse reliability problem. Journal of Engineering Mechanics, 120(5), 1154–1159</li>
+</ul>
+
+
+</body>
+
+</html>

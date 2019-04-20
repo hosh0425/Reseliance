@@ -1,0 +1,132 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>USFOS Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>USFOS Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RUSFOSModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > External Software > USFOS</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>For users who have USFOS installed on the computer, this model allows parameters to be given to USFOS and results to be returned to Rt.</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul> 
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="ParameterList">Parameter List</h3>
+<ul>
+	<li>List of the parameters that should be mapped into the USFOS model.</li>
+</ul>
+
+<h3 id="ExecutableList">Executable List</h3>
+<ul>
+	<li>Absolute path to the USFOS.exe file, for example:</li> 
+	<p>C:/Program Files/USFOS/bin/usfos.exe</p>
+</ul>
+<h3 id="ControlFile">Control File</h3>
+<ul>
+	<li>Absolute path to the location of the USFOS control file, for example: </li>
+	<p>C:/head.fem</p>
+</ul>
+<h3 id="ModelFile">Model File</h3>
+<ul>
+	<li>Absolute path to the location of the USFOS model file, for example: </li>
+	<p>C:/stru.fem</p>
+</ul>
+
+<h3 id="OptionalFile">Optional File</h3>
+<ul>
+	<li>Absolute path to the location of the USFOS optional file </li>
+	
+</ul>
+
+<h3 id="ResultFile">Result File</h3>
+<ul>
+	<li>Absolute path to the location of the USFOS result file, for example: </li>
+	<p>C:/res.out</p>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not automatically create any response objects.</li>
+	<li>Rather, creates File Response objects.</li>
+	<li>In those objects, specify the name of the USFOS and the name of the file where USFOS puts the response.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>Example</h2> 
+
+<ul> 
+	<img src="images/ufsosmenu.JPG" alt=""/>
+	<li>To etablish a functioning connection between UFSOS and Rtx and use its results in Rt, the following procedure could be followed:</li>
+	<li>It is recommended that the output files of UFSOS are saved in the same directory as Rt's executive file.</li>
+	<li>Properties of the UFSOS object has to be filled as it has been described in the <a href="#ObjectName">properties</a> section.</li>
+	<li>List of random variables also has to be defined. Note that these variables have to have a consistent naming as the ones in the UFSOS object</li>
+	<li>To extract the results and use them in Rtx analyses, one can create a <a href="RFileResponse.html">File Response</a> like this:</li>
+	<p></p>
+	<img src="images/ufsosfile.JPG" alt=""/>
+	<p></p>
+	<li>For more information on how to fill out the properties section you can check you can check <a href="RFileResponse.html">File Response</a>.</li>
+	<p></p>
+	<li>Finally, a proper <a href="RFunction.html">Limit State Function</a> should be defined to evaluate failure probability and reliability index, using UFSOS results:</li>
+	<li>Before running the analyses, it is recommended to check whether Rtx and UFSOS are well-connected, using <a href="RFunctionEvaluationAnalyzer.html">Function Evaluation Analyzer</a>.</li>
+</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>ANSYS Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>ANSYS Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RANSYSModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > External Software > ANSYS</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This is an interface to the ANSYS mechanical simulation software.</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Indicates whether the model is allowed to print messages in the Output Pane.</li>
+</ul>
+
+<h3 id="ParameterList">Parameter List</h3>
+<ul>
+	<li>List of the parameters that should be mapped into the ANSYS model.</li>
+</ul>
+
+<h3 id="ExecutableList">Executable List</h3>
+<ul>
+	<li>Absolute path to the ansys.exe file, for example:</li>
+	<p>D:/Program Files/ANSYS Inc/v120/ansys/bin/intel/ansys.exe</p>
+</ul>
+
+<h3 id="InputFile">Input File</h3>
+<ul>
+	<li>Absolute or relative path to the location of the ANSYS input file, for example:</li>
+	<p>C:/Example.inp</p>
+	<li>In this file, replace numbers with the name of the corresponding parameters in Rt</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not automatically create any response objects.</li>
+	<li>Rather, create File Response objects.</li>
+	<li>In those objects, specify the name of the ANSYS and the name of the file where ANSYS puts the response.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h2>Example</h2> 
+
+<ul>
+	<img src="images/ansysmenu.JPG" alt=""/>
+	<li>To etablish a functioning connection between ANSYS and Rtx and use its results in Rt, the following procedure could be followed:</li>
+	<li>It is recommended that the output files of ANSYS are saved in the same directory as Rt's executive file.</li>
+	<li>Properties of the ANSYS object has to be filled as it has been described above.</li>
+	<li>List of random variables also ha to be defined. Note that these variables have to have a consistent naming as the ones in the ANSYS object</li>
+	<p></p>
+	<li>To extract the results and use them in Rtx analyses, one can create a File Response like this:</li>
+	<p></p>
+	<img src="images/ansysfile.JPG" alt=""/>
+	<p></p>
+	<li>Please note that assigning 0 and 2 to Row and Column properties respectively, makes Rtx to search all rows of second column for data. For more information you can check <a href="RFileResponse.html">File Response</a>.</li>
+	<p></p>
+	<li>Finally, a proper <a href="RFunction.html">Limit State Function</a> should be defined to evaluate failure probability and reliability index, using ANSYS results:</li>
+	<p></p>
+	<img src="images/ansysfunction.JPG" alt=""/>
+	<p></p>
+	<li>Before running the analyses, it is recommended to check whether Rtx and ANSYS are well-connected, using <a href="RFunctionEvaluationAnalyzer.html">Function Evaluation Analyzer</a>.</li>
+</ul>
+
+</body>
+
+</html>

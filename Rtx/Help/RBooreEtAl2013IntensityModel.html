@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Boore et al. 2013 Intensity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+ 
+<body>
+
+
+<h1>Boore et al 2013 Intensity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RBooreEtAl2013IntensityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Intensity > Boore et al 2013 Intensity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the spectral acceleration, peak ground acceleration, or peak 
+        ground velocity at specified locations for given magnitude and hypocenter 
+        location of several earthquake sources as input, based on the Boore et al. (2014) attenuation relation.</li>
+	<li>Depth to Vs = 1 km/s is calculated based on formulas recommended in the Boore et 
+        al. (2014), if it is unknown.</li>
+    <li>In case of unkown parameters, you can enter the unknown-identifier (e.g. 999 in some fields) once for all inputs in each field, assuming all inputs of that field are unkown</li>
+	<li>For more information, see 
+        <a href="#BooreEtAl2013">
+        Boore et al. (2014)</a>.</li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MagnitudeList">Magnitude List</h3>
+<ul>
+	<li>Magnitudes of various earthquake sources</li>
+</ul>
+
+<h3 id="HypocentreLocationList">Hypocentre Location List </h3>
+<ul>
+	<li>Hypocenter locations of earthquake sources, which automatically will yield the radius \({R}\) to the various output locations.</li>
+</ul>
+
+<h3 id="EpsilonUncertaintyList">Epsilon Uncertainty List</h3>
+<ul>
+	<li>Intra-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="EtaUncertaintyList">Eta Uncertainty List</h3>
+<ul>
+	<li>Inter-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="FaultTypes">Fault Types</h3>
+<ul>
+	<li>Fault mechanism that can either be Unspecified, Normal-slip, Strike-slip, or Reverse-slip.</li>
+</ul>
+
+<h3 id="Regions">Regions</h3>
+<ul>
+	<li>Region of the location of the building which can either be California, Japan, China, Taiwan, Italy, Turkey, or Other (If Other is used, the model will use California's specifications)</li>
+</ul>
+
+<h3 id="ResponseType">Response Type</h3>
+<ul>
+	<li>Type of the response than can either be \({S_a}\), \({PGA}\), or \({PGV}\)</li>
+</ul>
+
+<h3 id="PeriodList">Period List</h3>
+<ul>
+	<li>List of the natural periods at which the intensity is evaluated</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here)</li>
+</ul>
+
+<h3 id="ShearWaveVelocityList">Shear Wave Velocity List</h3>
+<ul>
+	<li>List of the shear wave velocities at the specified locations</li>
+</ul>
+
+<h3 id="DepthToVs1List">Depth To Vs 1 List</h3>
+<ul>
+	<li>List of the depths of Vs = 1 km/s boundry of the specified locations (Use 999 as input in case of unknown depth)</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>Earthquake intensities (as many as the locations provided in the input)</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+    <li id="BooreEtAl2013">Boore, D. M., et al. (2014).NGA-West2 Equations for 
+        Predicting PGA, PGV, and 5% Damped PSA for Shallow Crustal Earthquakes. Earthquake Spectra, 
+        30(3), 1057–1085.</li>	
+        <li id="Baker">Baker, J. W. (n.d.). Ground motion prediction equation functions. Retrieved October 06, 2016, from https://web.stanford.edu/~bakerjw/GMPEs.html </li>
+</ul>
+
+</body>
+
+</html>

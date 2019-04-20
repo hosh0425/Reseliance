@@ -1,0 +1,241 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Soil Structure Interaction Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Soil Structure Interaction Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RSoilStructureInteractionModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Building > Soil Structure Interaction</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model analyzes the linear and nonlinear behavior of fixed- and flexible-base structures subjected to the ground shaking based on the selected run-mode and produces the relative responses employing Newmark’s β method.</li>
+	<li>For further information on this model, refer to <a href="#MirzaieMahsuliGhannad">Mirzaie, F., Mahsuli, M., Ghannad, M.A. (2017)</a>, <a href="#KhosravikiaMahsuliGhannad2017"> Khosravikia, F., Mahsuli, M., Ghannad, M.A. (2017) </a>, <a href="#KhosravikiaMahsuliGhannad20181"> Khosravikia, F., Mahsuli, M., Ghannad, M.A. (2018) </a>, <a href="#AbtahiMahsuliGhannad">Abtahi, S., Mahsuli, M., Ghannad, M.A. (2018) </a> and <a href="#KhosravikiaMahsuliGhannad20182"> Khosravikia, F., Mahsuli, M., Ghannad, M.A. (2018) </a>.</li>
+
+
+
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>///</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="FixedBasePeriod">Fixed Base Period</h3>
+<ul>
+	<li>Natural period of the fixed-base structure</li>
+</ul>
+
+<h3 id="MDOForSDOF">MDOF or SDOF</h3>
+<ul>
+	<li>Multi-degree-of-freedom or single-degree-of-freedom systems. Note that an one story MDOF building is the same as the SDOF building, however, selecting SDOF in such cases takes less running time.</li>
+</ul>
+
+<h3 id="StructureDamping">Structure Damping</h3>
+<ul>
+	<li>Material damping coefficient of the structure</li>
+</ul>
+
+<h3 id="SoilDamping">Soil Damping</h3>
+<ul>
+	<li>Damping coefficient of the soil</li>
+</ul>
+
+<h3 id="PoissonRatio">Poisson Ratio</h3>
+<ul>
+	<li>Soil Poisson ratio</li>
+</ul>
+
+<h3 id="AspectRatio">Aspect Ratio</h3>
+<ul>
+	<li>Ratio of the effective height of the building divided by the radius of the foundation</li>
+</ul>
+
+<h3 id="EmbedmentRatio">Embedment Ratio</h3>
+<ul>
+	<li>Ratio of the embedded height of the foundation divided by its radius</li>
+</ul>
+
+<h3 id="StructureToSoilMassRatio">Structure to Soil Mass Ratio</h3>
+<ul>
+	<li>Ratio of total mass of the structure divided by mass of the equivalent soil. For MDOF systems, the total mass and height of the structure should be used, but for SDOF systems, the effective mass and height should be considered.</li>
+</ul>
+
+<h3 id="FoundationToStructureMassRatio">Foundation to Structure Mass Ratio</h3>
+<ul>
+	<li>Ratio of mass of foundation to total mass of the structure for MDOF systems and effective mass of the structure for SDOF systems.</li>
+</ul>
+
+<h3 id="FoundationCentroidRatio">Foundation Centroid Ratio</h3>
+<ul>
+	<li>Ratio of the location of the mass center of the foundation, measured from its bottom, divided by its depth.</li>
+</ul>
+
+<h3 id="SSISeverityMeasure">SSI Severity Measure</h3>
+<ul>
+	<li>Dimensionless frequency or shear wave velocity</li>
+</ul>
+
+<h3 id="DimensionlessFrequency">Dimensionless Frequency or Shear Wave Velocity</h3>
+<ul>
+	<li>Entered based on the selected option in the above. Note that each of them could be computed by the other one.</li>
+</ul>
+
+<h3 id="SoilType">Soil Type</h3>
+<ul>
+	<li>Type of soil based on ASCE7-10</li>
+</ul>
+
+<h3 id="ApplyShearWaveVelocity">Apply Shear Wave Velocity Degradation Factor</h3>
+<ul>
+	<li>Yes for applying degradation factor and No for ignoring. This feature is used for SDOF systems only.</li>
+</ul>
+
+<h3 id="Radius">Radius</h3>
+<ul>
+	<li>Radius of the foundation given as an integer. The default value in most of the run-modes is 1.</li>
+</ul>
+
+<h3 id="RunMode">Run Mode</h3>
+<ul>
+	<li>GivenRSameR, GivenDucSameR, GivenDucComputeModificationFactor, GivenDucSameRorFy, GivenRFixSameFy, GivemDucFixSameFy, and GivenDucSSISameFy for both MDOF and SDOF systems. GivenRReducedFyATC, GivenRReducedFyASCE_05, GivenRReducedFyASCE_10, and  GivenRReducedFyNEHRP for SDOF systems only.</li>
+</ul>
+
+<h3 id="SsASCE">Ss ASCE</h3>
+<ul>
+	<li>This feature is used for SDOF systems only.</li>
+</ul>
+
+<h3 id="S1ASCE">S1 ASCE</h3>
+<ul>
+	<li>This feature is used for SDOF systems only.</li>
+</ul>
+
+<h3 id="StrengthReductionFactor">Strength Reduction Factor or Target Ductility</h3>
+<ul>
+	<li>Representative of the level of nonlinearity. It should be entered based on selected run-mode.</li>
+</ul>
+
+<h3 id="Overstrength">Overstrength</h3>
+<ul>
+	<li>This feature is used for SDOF systems only.</li>
+</ul>
+
+<h3 id="OverstrengthNHRP">Overstrength NHRP</h3>
+<ul>
+	<li>This feature is used for SDOF systems only.</li>
+</ul>
+
+<h3 id="Records">Records</h3>
+<ul>
+	<li>List of utilized records with complete addresses and separated by a semicolon.</li>
+</ul>
+
+<h3 id="RecordTimeSteps">Record Time Steps</h3>
+<ul>
+	<li>Time step of each record should be entered here respectively, and separated by a semicolon.</li>
+</ul>
+<h3 id= "RecordSelectionUncertainty"> Record Selection Uncertainty</h3>
+<ul>
+<li> This is a feature for random selection of the record. It should be a random variable with a uniform distribution between 0 and 1 to assign uncertainty of ground motion. </li>
+</ul>
+<h3 id="RecordScalingMethod">Record Scaling Method</h3>
+<ul>
+	<li>(PGA, Sa , or Spectrum)</li>
+</ul>
+
+<h3 id="IntensityMeasure">Intensity Measure</h3>
+<ul>
+	<li>The essential parameter for record scaling based on the selected method</li>
+</ul>
+
+<h3 id="RecordScaling">Record Scaling (All, Adaptive, or Unscaled)</h3>
+<ul>
+	<li>In “All” mode, all of the record files will be considered and scaled with the specified record scaling method. In “Adaptive” mode, records with the specified intensity measure, which are greater than input intensity measure multiplied by scale upper bound, and lower than input intensity measure multiplied by scale lower bound, will be omitted from analysis. In “Unscaled” mode, none of the record files will be scaled.</li>
+</ul>
+
+<h3 id="ScaleFactorLowerBound">Scale Factor Lower Bound</h3>
+<ul>
+	<li>given as integer with default value of 0.5</li>
+</ul>
+
+<h3 id="ScaleFactorUpperBound">Scale Factor Upper Bound</h3>
+<ul>
+	<li>given as integer with default value of 2</li>
+</ul>
+
+
+
+<h2>Output</h2>
+<ul>
+	<li>Fixed- and flexible- base ductility demands, strength reduction factors, and modification factors 
+</li><li>Elastic accelerations, displacements, and spring forces
+</li><li>Inelastic accelerations, displacements, and spring forces
+</li><li>Flexible-base period, percent functional, damage factor, etc.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="MirzaieMahsuliGhannad">Mirzaie, F., Mahsuli, M., Ghannad, M.A. (2017) “Probabilistic analysis of soil-structure interaction effects on the seismic performance of structures,” Earthquake Engineering & Structural Dynamics, 46, pp. 641-660 (<a href="https://doi.org/10.1002/eqe.2807">DOI</a>)</li>
+		<li id="KhosravikiaMahsuliGhannad2017">Khosravikia, F., Mahsuli, M., Ghannad, M.A. (2017) “Probabilistic evaluation of 2015 NEHRP soil-structure interaction provisions,” ASCE Journal of Engineering Mechanics, 143(9): 04017065 (<a href="https://doi.org/10.1061/(ASCE)EM.1943-7889.0001274">DOI</a>)</li>
+		<li id="KhosravikiaMahsuliGhannad20181">Khosravikia, F., Mahsuli, M., Ghannad, M.A. (2018) “The effect of soil-structure interaction on the seismic risk to buildings,” Bulletin of Earthquake Engineering, 16(9), pp. 3653–3673 (<a href="https://doi.org/10.1007/s10518-018-0314-z">DOI</a>)</li>
+		<li id="AbtahiMahsuliGhannad">Abtahi, S., Mahsuli, M., Ghannad, M.A. (2018) “Probabilistic evaluation of strength demands for multistory shear buildings,” ASCE Journal of Structural Engineering, 118(9): 04018154 (<a href="https://doi.org/10.1061/(ASCE)ST.1943-541X.0002153">DOI</a>)</li>
+		<li id="KhosravikiaMahsuliGhannad20182">Khosravikia, F., Mahsuli, M., Ghannad, M.A. (2018) “Soil-structure interaction in seismic design code: Risk-based evaluation,” ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering, 4(4): 04018033 (<a href="https://doi.org/10.1061/AJRUA6.0000984">DOI</a>)</li>
+
+	</ul>
+
+
+</body>
+
+</html>

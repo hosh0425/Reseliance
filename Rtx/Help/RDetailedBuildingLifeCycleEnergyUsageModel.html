@@ -1,0 +1,327 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Detailed Building Life Cycle Energy Usage Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+
+<body>
+
+
+<h1>Detailed Building Life Cycle Energy Usage Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RDetailedBuildingLifeCycleEnergyUsageModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Environmental > Detailed Building Life Cycle Energy Usage</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the lifecycle energy usage in a building at a fine detail level.</li>
+	<li>Extraction and manufacturing phase</li>
+	$${E_{EM}} = {E_P} + {E_t} = \sum {q{i_p} + \sum {q{i_t}d = \sum {q({i_p} + {i_t}d)} } } $$
+	<li>On-site construction phase</li>
+	$${E_{OC}} = {r_h}{t_{wh}}{i_{hm}} + (1 - {r_h}){i_m}{t_{wh}} + {1 \over {{t_s}}}{t_{wh}}{i_{wt}}{d_{wt}}{n_w}$$
+	<li>Operation phase</li>
+	$${E_O} = {t_{des}}{E_a}$$
+	<li>Maintenance phase</li>
+	$$\eqalign{
+  & {E_M} = \sum {\left( {{{{t_{des}}} \over {{t_{mat}}}} - 1} \right)} {i_{mat}},{t_{{\mathop{\rm mat}\nolimits} }} < {t_{des}}  \cr 
+  & {E_M} = 0,{t_{mat}} \ge {t_{des}} \cr} $$
+	<li>End-of-life phase</li>
+	$${E_{EoL}} = {q_{total}}{i_{eol}}$$
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="ConcreteQuantity">Concrete Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of concrete including mortar and concrete 20MPa, whose units are converted to kg</li>
+</ul>
+
+<h3 id="ConcreteIntensity">Concrete Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of concrete materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="ConcreteTransportationDistance">Concrete Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by concrete, including backhaul, in km</li>
+</ul>
+
+<h3 id="ConcreteTransportationIntensity">Concrete Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of concrete materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="SteelQuantity">Steel Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of steel including nails, welded wire mesh, wide flange section, rebar, rod, light sections, sheet metal, whose units are converted to kg</li>
+</ul>
+
+<h3 id="SteelIntensity">Steel Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of steel materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="SteelTransportationDistance">Steel Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by steel, including backhaul, in km</li>
+</ul>
+
+<h3 id="SteelTransportationIntensity">Steel Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of steel materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="WoodQuantity">Wood Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of wood including small dimension lumber, softwood plywood, large dimension lumber , whose units are converted to kg</li>
+</ul>
+
+<h3 id="WoodIntensity">Wood Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of wooden materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="WoodTransportationDistance">Wood Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by wood, including backhaul, in km</li>
+</ul>
+
+<h3 id="WoodTransportationIntensity">Wood Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of wooden materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GypsumBoardQuantity">Gypsum Board Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of Gypsum board including Gypsum wall 0.5” and 0.625”, whose units are converted to kg</li>
+</ul>
+
+<h3 id="GypsumBoardIntensity">Gypsum Board Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of Gypsum board defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GypsumBoardTransportationDistance">Gypsum Board Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by Gypsum board, including backhaul, in km</li>
+</ul>
+
+<h3 id="GypsumBoardTransportationIntensity">Gypsum Board Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of Gypsum board defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="VapourBarrierQuantity">Vapour Barrier Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of vapor barrier including 6 mil polyethylene, EPDM membrane, whose units are converted to kg</li>
+</ul>
+
+<h3 id="VapourBarrierIntensity">Vapour Barrier Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of vapor barrier defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="VapourBarrierTransportationDistance">Vapour Barrier Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by vapor barrier, including backhaul, in km</li>
+</ul>
+
+<h3 id="VapourBarrierTransportationIntensity">Vapour Barrier Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of vapor barrier defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="InsulationQuantity">Insulation Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of insulation including batt fibreglass, brick, vinyl siding glazing, whose units are converted to kg</li>
+</ul>
+
+<h3 id="InsulationIntensity">Insulation Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of insulation materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="InsulationTransportationDistance">Insulation Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by insulation, including backhaul, in km</li>
+</ul>
+
+<h3 id="InsulationTransportationIntensity">Insulation Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of insulation materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GlassQuantity">Glass Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of glass including glazing panel, low E Tin Argon filled glazing, whose units are converted to kg</li>
+</ul>
+
+<h3 id="GlassIntensity">Glass Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of glass materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="GlassTransportationDistance">Glass Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by glass, including backhaul, in km</li>
+</ul>
+
+<h3 id="GlassTransportationIntensity">Glass Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of glass materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="OtherMaterialQuantity">Other Material Quantity</h3>
+<ul>
+	<li>\({q}\) = Quantity of the other material including aluminum, whose units are converted to kg</li>
+</ul>
+
+<h3 id="OtherMaterialIntensity">Other Material Intensity</h3>
+<ul>
+	<li>\({i_p}\) = The intensity of the other material defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="OtherMaterialTransportationDistance">Other Material Transportation Distance</h3>
+<ul>
+	<li>\({d}\) = The distance travelled by the other material, including backhaul, in km</li>
+</ul>
+
+<h3 id="OtherMaterialTransportationIntensity">OtherMaterial Transportation Intensity</h3>
+<ul>
+	<li>\({i_t}\) = Transportation intensity of other materials defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="RatioWorkerHours">Ratio Worker Hours</h3>
+<ul>
+	<li>\({r_h}\) = The ratio of worker-hours allocated to the use of heavy machinery such as cranes, bulldozers and backhoes, defined as a random variable</li>
+</ul>
+
+<h3 id="TotalWorkerHours">Total Worker Hours</h3>
+<ul>
+	<li>\({t_{wh}}\) = The total worker-hours allocated to construction and site work, defined as a random variable</li>
+</ul>
+
+<h3 id="WorkerShiftLength">Worker Shift Length</h3>
+<ul>
+	<li>\({t_s}\) = The worker shift, typically 8 hours</li>
+</ul>
+
+<h3 id="DistanceWorkerTravel">Distance Worker Travel</h3>
+<ul>
+	<li>\({d_{wt}}\) = The distance travelled by workers including return trips, in km</li>
+</ul>
+
+<h3 id="HeavyMachineIntensity">Heavy Machine Intensity</h3>
+<ul>
+	<li>\({i_{hm}}\) = The energy intensity due to heavy machinery use, in J/worker-hour</li>
+</ul>
+
+<h3 id="ManualLaborIntensity">Manual Labor Intensity</h3>
+<ul>
+	<li>\({i_m}\) = The energy intensity due to manual labour, in J/worker-hour</li>
+</ul>
+
+<h3 id="MeanNumberWorkers">Mean Number Workers</h3>
+<ul>
+	<li>\({n_w}\) = The mean number of workers during construction, defined as a random variable</li>
+</ul>
+
+<h3 id="WorkerTransportationIntensity">Worker Transportation Intensity</h3>
+<ul>
+	<li>\({i_{wt}}\) = The worker transportation energy intensity, in J/passenger/km</li>
+</ul>
+
+<h3 id="DesignLife">DesignLife</h3>
+<ul>
+	<li>\({t_{des}}\) = The design life of the building in years</li>
+</ul>
+
+<h3 id="AnnualEnergy">Annual Energy</h3>
+<ul>
+	<li>\({E_a}\) = The annual energy demand defined as a variable with lognormal distribution</li>
+</ul>
+
+<h3 id="Material1Life">Material 1 Life</h3>
+<ul>
+	<li>\({t_{mat}}\) = The expected life for material 1, in years</li>
+</ul>
+
+<h3 id="Material1ReplacementIntensity">Material 1 Replacement Intensity</h3>
+<ul>
+	<li>\({i_{mat}}\) = The replacement intensity for material 1, defined as a random variable</li>
+</ul>
+
+<h3 id="Materia21Life">Material 2 Life</h3>
+<ul>
+	<li>\({t_{mat}}\) = The expected life for material 2, in years</li>
+</ul>
+
+<h3 id="Material2ReplacementIntensity">Material 2 Replacement Intensity</h3>
+<ul>
+	<li>\({i_{mat}}\) = The replacement intensity for material 2, defined as a random variable</li>
+</ul>
+
+<h3 id="EOLIntensity">EOL Intensity</h3>
+<ul>
+	<li>\({i_{eol}}\) = The energy intensity associated with the end of life phase of a building, in J</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({E}\) = The lifecycle energy usage in a building in J</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

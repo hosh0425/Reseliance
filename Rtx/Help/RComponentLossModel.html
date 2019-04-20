@@ -1,0 +1,177 @@
+﻿<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Component Loss Model</title>
+
+    <link href="images/style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+
+
+<body>
+
+
+    <h1>Component Loss Model</h1>
+
+
+    <h2>Class Name</h2>
+
+    <ul>
+        <li>RComponentLossModel</li>
+    </ul>
+
+
+    <h2>Location in Objects Pane</h2>
+    <ul>
+        <li>Models > Model > Consequence > Economic > Component Loss Model</li>
+    </ul>
+
+
+    <h2>Model Description</h2>
+
+    <h3>Model Form</h3>
+    <ul>
+        This model computes the total loss of components of the same type by considering bulk discount as well. The following model computes the total loss of the components of the same type:
+
+
+        $$ \eqalign{
+        &{C_{comp}}(\eta) = \sum ^{N_C}_{i=1} \sum ^{N_M}_{j=1} ((R_j(\eta_i)-R_{j+1}(\eta_i))\cdot(1-D_j(n_j))\cdot\eta_i \cdot C_{max,comp} \cdot Q_i) }$$
+
+        where, \(N_C\) is total number of components of the desired type, \(N_M\) is number of methods of repair and \(n_j\) is number of the components of the same type require the  \(j^{th}\) method of repair.
+        
+        <li>For further information on this model, refer to <a href="#AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019)</a> and <a href="#AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018)</a>. </li>
+
+
+    </ul>
+
+    <h3>DDM sensitivities</h3>
+    <ul>
+        <li>No</li>
+    </ul>
+
+
+    <h2>Properties</h2>
+
+    <h3 id="ObjectName">Object Name</h3>
+    <ul>
+        <li>Name of the object in Rtx</li>
+        <li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;)</li>
+        <li>The name is unique and case-sensitive</li>
+    </ul>
+
+    <h3 id="DisplayOutput">Display Output</h3>
+    <ul>
+        <li>Determines whether the model is allowed to print messages to the Output Pane</li>
+    </ul>
+
+
+ 
+  
+
+    <h3 id="DamageRatioList">Damage Ratio List </h3>
+    <ul>
+        <li> List of the damage ratios for all components for which this model computes the loss </li>
+        <li>\(\eta_i\) in the formula above is the damage ratio in component i </li>
+    </ul>
+
+    <h3 id="Rj"> \(R_{j}\) </h3>
+    <ul>
+       
+
+        \[{{R}_{j}}({{\eta }_{i}})=\left\{ \begin{array}{*{35}{l}}
+        0 & {{\eta }_{i}}\le {{\eta }_{Tj}}-\Delta {{\eta }_{Tj}}  \\
+        \frac{1}{2}\sin \left( \frac{\pi }{2}\frac{{{\eta }_{i}}-{{\eta }_{Tj}}}{\Delta {{\eta }_{Tj}}} \right)+\frac{1}{2} & {{\eta }_{Tj}}-\Delta {{\eta }_{Tj}}
+        <{{\eta }_{i}}<{{\eta }_{Tj}}+\Delta {{\eta }_{Tj}}  \\
+           1 & {{\eta }_{i}}\ge {{\eta }_{Tj}}+\Delta {{\eta }_{Tj}}\\
+            \end{array} \right.\]
+
+
+    </ul>
+
+    <h3 id="ThresholdDamageRatios"> Threshold Damage Ratio </h3>
+    <ul>
+        <li>\(\eta_{Tj}\) = damage ratio threshold after which the \(j^{th}\) or higher methods of repair are required; \(η_{Tj} − ∆ η_{Tj}\) and \(η_{Tj} + ∆ η_{Tj}\) for all methods of repair are entered as a list in Rtx in “Threshold Damage Ratios.” Hence, the length of the list is twice the number of methods of repair.
+ </li>
+    </ul>
+
+
+    <h3 id="DiscountRates">Discount Rates</h3>
+    <ul>
+        <li>\(D_j\)  = discount ratio for method of repair j</li>
+
+
+        \[{{D}_{j}}({{n}_{j}})=\left\{ \begin{array}{*{35}{l}}
+        0 & {{n}_{j}}\le {{n}_{lj}}  \\
+        0.5D_{j}^{\max }\cdot \left( 1-\cos \left( \pi \frac{{{n}_{j}}-{{n}_{lj}}}{{{n}_{uj}}-{{n}_{lj}}} \right) \right) & {{n}_{lj}}
+        <{{n}_{j}}<{{n}_{uj}}  \\
+   D_{j}^{\max } & {{n}_{j}}\ge {{n}_{uj}}  \\
+\end{array} \right.\]
+
+
+
+    </ul>
+
+   
+
+    <h3 id="LowerQuantity">Lower Quantity</h3>
+    <ul>
+        <li>\(n_{lj}\) = the quantity lower than which there is zero discount. Lower quantities for all methods of repair are entered in Rtx in “Lower Quantity” as a list</li>
+    </ul>
+
+    <h3 id="UpperQuantity">Upper Quantity</h3>
+    <ul>
+        <li>\(n_{uj}\) = the quantity more than which there is Djmax discount. Upper quantities for all methods of repair are entered in Rtx in “Upper Quantity” as a list</li>
+    </ul>
+
+
+    <h3 id="DiscountRates">Discount Rates</h3>
+    <ul>
+        <li>\(D_{j^{max}}\) = the maximum discount rate \(D_{j^{max}}\) when \(n_{j}\) is larger than the threshold \(n_{j}\)
+</li>
+    </ul>
+
+    <h3 id="ReplacementCostPerUnit">Replacement Cost Per Unit</h3>
+    <ul>
+        <li>\(C_{max,comp}\) = Maximum unit cost of repair for the desired component type, usually, the unit cost of replacement</li>
+    </ul>
+
+    <h3 id="Areas">Areas</h3>
+    <ul>
+        <li>\(Q_i\)=quantity of the \(i^{th}\) component, e.g., the area of a partition wall</li>
+    </ul>
+
+    <h3 id="AreaDenepdent">Area Dependent</h3>
+    <ul>
+        <li>in Rtx using the property “Area Dependent” one can determine whether or not the component is dependent to area. If yes, the area which defines area of one quantity in computing discount should be entered.
+</li>
+    </ul>
+
+
+    <h2>Output (Automatically generated generic response object)</h2>
+    <ul>
+        <li>\(C_{comp}\) = total repair cost of the components of the same type </li>
+
+    </ul>
+
+
+    <h2>Right-click Menu</h2>
+
+    <h3 id="Remove">Remove</h3>
+    <ul>
+        <li>Removes the object.</li>
+    </ul>
+
+    <h2>References</h2>
+    <ul>
+        <li id="AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019) “Component damage models for detailed seismic risk analysis using structural reliability methods,” Structural Safety, 76, pp. 108-122 (<a href="https://doi.org/10.1016/j.strusafe.2018.08.004">DOI</a>)</li>
+        <li id="AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018) “Detailed seismic risk analysis of buildings using structural reliability methods,” Probabilistic Engineering Mechanics, 53, pp. 23-38 (<a href="https://doi.org/10.1016/j.probengmech.2018.04.001">DOI</a>)</li>
+    </ul>
+
+</body>
+
+</html>

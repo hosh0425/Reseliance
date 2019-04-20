@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Generic Attenuation Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Generic Attenuation Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RGenericAttenuationModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Intensity > Generic Attenuation</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces an intensity at specified locations for given magnitude and hypocenter location of several earthquake sources as input.</li>
+	$$I = {10^{ - {\vartheta _1} + {\vartheta _2} \cdot M - {\vartheta _3} \cdot {{\log }_{10}}(R) + {\vartheta _4} \cdot R + \varepsilon }}$$
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>Yes</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here)</li>
+</ul>
+
+<h3 id="MagnitudeList">Magnitude List</h3>
+<ul>
+	<li>\({M}\) = magnitudes of various earthquake sources</li>
+</ul>
+
+<h3 id="HypocentreLocationList">Hypocentre Location List</h3>
+<ul>
+	<li>Hypocenter locations of earthquake sources, which automatically will yield the radius \({R}\) to the various output locations.</li>
+</ul>
+
+<h3 id="Theta1">Theta1</h3>
+<ul>
+	<li>\({\vartheta _ 1}\) = Model parameter, typically 1.02 (Joyner & Boore)</li>
+</ul>
+
+<h3 id="Theta2">Theta2</h3>
+<ul>
+	<li>\({\vartheta _ 2}\) = Model parameter, typically 0.249 (Joyner & Boore)</li>
+</ul>
+
+<h3 id="Theta3">Theta3</h3>
+<ul>
+	<li>\({\vartheta _ 3}\) = Model parameter, typically 1 (Joyner & Boore)</li>
+</ul>
+
+<h3 id="Theta4">Theta4</h3>
+<ul>
+	<li>\({\vartheta _ 4}\) = Model parameter, typically 0.00255 (Joyner & Boore)</li>
+</ul>	
+	
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = Model error, typically a normal random variable with a zero mean and a 0.26 standard deviation (Joyner & Boore)</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({I}\) = Intensities (as many as the locations provided in the input)</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

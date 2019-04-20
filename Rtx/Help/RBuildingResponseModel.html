@@ -1,0 +1,149 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Building Response Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Building Response Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RBuildingResponseModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Building > Building Response</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	$$T = \exp ( - {\theta _1}) \cdot {H^{{\theta _2}}}$$
+	$$V = \exp \left( { - {\theta _3} - {\theta _4} \cdot H} \right) \cdot {{2 + \left( {\alpha  - 2} \right) \cdot \left( {\alpha  - 1} \right)} \over 8}$$
+	$${\delta _y} = {{{T^2}} \over {4{\pi ^2}}} \cdot {{V \cdot g} \over H}$$
+	$$\mu  = \exp ({\theta _5}) \cdot {H^{ - {\theta _6}}} \cdot {{10 + \left( {\alpha  - 2} \right) \cdot \left( {\alpha  - 1} \right)} \over {16}}$$
+	$${\delta _u} = \mu  \cdot {\delta _y}$$
+	$$\kappa  = \exp \left( { - {\theta _7} \cdot Sa \cdot {\alpha ^{ - {\theta _8}}}} \right)$$
+	$$\ln \left( {{\delta _p}} \right) = {\theta _9} \cdot \ln \left( {{\delta _y}} \right) + {\theta _{10}} \cdot \ln \left( {{\delta _u}} \right) - {\theta _{11}} \cdot \ln \left( V \right) - {\theta _{12}} \cdot \ln \left( \kappa  \right) + {\theta _{13}} \cdot \ln \left( {Sa} \right) + {\theta _{14}} \cdot Sa - {\theta _{15}} + {\sigma _1} \cdot {\varepsilon _1}$$
+	$$\ln \left( {{A_p}} \right) =  - {\theta _{16}} \cdot \ln \left( {{\delta _y}} \right) + {\theta _{17}} \cdot \ln \left( V \right) - {\theta _{18}} \cdot \ln \left( \mu  \right) + {\theta _{19}} \cdot \ln \left( \kappa  \right) + {\theta _{20}} \cdot \ln \left( {Sa} \right) - {\theta _{21}} + {\sigma _2} \cdot {\varepsilon _2}$$
+	where Building response model gets some of the parameters from the Building Information model.
+
+    <li>For further information on this model, refer to <a href="#MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013)</a> and <a href="#MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013)</a>.</li>
+
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="BuildingInformationModel">Building Information Model</h3>
+<ul>
+	<li>A Building Information Model object that returns the height, \({H}\), and the code level, \({\alpha}\), to this model.</li>
+</ul>
+
+<h3 id="PeriodInformation">Period Information</h3>
+<ul>
+	<li>A Constant object that has the value of the natural period of the building.</li>
+</ul>
+
+<h3 id="Sa">Sa</h3>
+<ul>
+	<li>\({S{a}}\) = 5%-damped elastic spectral acceleration at the building site at the natural period of the building</li>
+</ul>
+
+<h3 id="Theta1-Theta8">Theta1 - Theta8</h3>
+<ul>
+	<li>\({\theta_1}\) - \({\theta_8}\)= Sub-model parameters</li>
+</ul>
+
+<h3 id="Theta9-Theta15">Theta9 - Theta15</h3>
+<ul>
+	<li>\({\theta_9}\) - \({\theta_{15}}\)= Peak drift ratio model parameters</li>
+</ul>
+
+<h3 id="Theta16-Theta21">Theta16 - Theta21</h3>
+<ul>
+	<li>\({\theta_{16}}\) - \({\theta_{21}}\)= Peak acceleration model parameters</li>
+</ul>
+
+<h3 id="Sigma1">Sigma1</h3>
+<ul>
+	<li>\({\sigma_1}\) = Standard deviation of the peak drift ratio model error</li>
+</ul>
+
+<h3 id="Sigma2">Sigma2</h3>
+<ul>
+	<li>\({\sigma_2}\) = Standard deviation of the peak acceleration model error</li>
+</ul>
+
+<h3 id="Epsilon1">Epsilon1</h3>
+<ul>
+	<li>\({\varepsilon_1}\) = Peak drift ratio model error</li>
+</ul>
+
+<h3 id="Epsilon2">Epsilon2</h3>
+<ul>
+	<li>\({\varepsilon_2}\) = Peak acceleration model error</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({\delta_p}\) = Peak drift ratio</li>
+	<li>\({A_p}\) = Peak acceleration</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part I: Models,” Structural Safety, 42, pp. 54-62 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.003">DOI</a>)</li>
+		<li id="MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part II: Analysis,” Structural Safety, 42, pp. 63-74 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.004">DOI</a>)</li>
+	</ul>
+
+
+</body>
+
+</html>

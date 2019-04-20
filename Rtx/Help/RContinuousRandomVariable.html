@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Continuous Random Variable</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Continuous Random Variable</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RContinuousRandomVariable</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Parameter > Random Variable > Continuous</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<img src="images/continousRVmenu.JPG" alt=""/>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="CurrentValue">Current Value</h3>
+<ul>
+	<li>Current realization of the random variable</li>
+</ul>
+
+<h3 id="DistributionType">Distribution Type</h3>
+<ul>
+	<li>Probability distribution of the random variable</li>
+	<li>The distribution type is followed by the distribution parameters inside parentheses.</li>
+	<li>These parameters, respectively, correspond to <a href="#Parameter1">Parameter 1</a> to <a href="#Parameter4">Parameter 4</a> that appear as some other properties below.</li>
+	<li>If, for instance, only two parameters appear inside parentheses for a particular distribution type, only <a href="#Parameter1">Parameter 1</a> and <a href="#Parameter2">Parameter 2</a> are applicable to that distribution.</li>
+	<li>If the &ldquo;User-defined&rdquo; distribution is selected, two more properties are shown, namely, <a href="#XPoints">X Points</a> and <a href="#PDFPoints">PDF Points</a>, described below.</li>
+</ul>
+
+<h3 id="Mean">Mean</h3>
+<ul>
+	<li>Mean of the random variable</li>
+	<li>It can be a number or another parameter.</li>
+	<li>If changed, the values of <a href="#CoefficientOfVariation">Coefficient Of Variation</a> and <a href="#Parameter1">Parameter 1</a> to <a href="#Parameter4">Parameter 4</a> properties are re-calculated.</li>
+</ul>
+
+<h3 id="StandardDeviation">Standard Deviation</h3>
+<ul>
+	<li>Standard deviation of the random variable</li>
+	<li>It can be a number or another parameter.</li>
+	<li>If changed, the values of <a href="#CoefficientOfVariation">Coefficient Of Variation</a> and <a href="#Parameter1">Parameter 1</a> to <a href="#Parameter4">Parameter 4</a> properties are re-calculated.</li>
+</ul>
+
+<h3 id="CoefficientOfVariation">Coefficient Of Variation</h3>
+<ul>
+	<li>Coefficient of variation of the random variable</li>
+	<li>It is a standardized measure of dispersion of a probability distribution.</li>
+	<li>If changed, the values of <a href="#StandardDeviation">Standard Deviation</a> and <a href="#Parameter1">Parameter 1</a> to <a href="#Parameter4">Parameter 4</a> properties are re-calculated.</li>
+</ul>
+
+<h3 id="Parameter1">Parameter 1</h3>
+<ul>
+	<li>The first parameter of the random variable, as appears inside the parentheses in the <a href="#DistributionType">Distribution Type.</a></li>
+	<li>If changed, the values of <a href="#Mean">Mean</a>, <a href="#StandardDeviation">Standard Deviation</a>, and <a href="#CoefficientOfVariation">Coefficient Of Variation</a> properties are re-calculated.</li>
+</ul>
+
+<h3 id="Parameter2">Parameter 2</h3>
+<ul>
+	<li>The second parameter of the random variable, as appears inside the parentheses in the <a href="#DistributionType">Distribution Type</a>, if applicable.</li>
+	<li>If changed, the values of <a href="#Mean">Mean</a>, <a href="#StandardDeviation">Standard Deviation</a>, and <a href="#CoefficientOfVariation">Coefficient Of Variation</a> properties are re-calculated.</li>
+</ul>
+
+<h3 id="Parameter3">Parameter 3</h3>
+<ul>
+	<li>The third parameter of the random variable, as appears inside the parentheses in the <a href="#DistributionType">Distribution Type</a>, if applicable.</li>
+	<li>If changed, the values of <a href="#Mean">Mean</a>, <a href="#StandardDeviation">Standard Deviation</a>, and <a href="#CoefficientOfVariation">Coefficient Of Variation</a> properties are re-calculated.</li>
+</ul>
+
+<h3 id="Parameter4">Parameter 4</h3>
+<ul>
+	<li>The fourth parameter of the random variable, as appears inside the parentheses in the <a href="#DistributionType">Distribution Type</a>, if applicable.</li>
+	<li>If changed, the values of <a href="#Mean">Mean</a>, <a href="#StandardDeviation">Standard Deviation</a>, and <a href="#CoefficientOfVariation">Coefficient Of Variation</a> properties are re-calculated.</li>
+</ul>
+
+<h3 id="UncertaintyType">Uncertainty Type</h3>
+<ul>
+	<li>Indicates whether the random variable describes an &ldquo;Aleatory&rdquo; or an &ldquo;Epistemic&rdquo; uncertainty.</li>
+	<li>This is employed, for instance, when computing model response standard deviation sensitivities in <a href="RFORMAnalyzer.html">FORM.</a></li>
+	<li>For more information, see <a href="#DerKiureghian2009">Der Kiureghian (2009)</a></li>
+</ul>
+
+<h3 id="XPoints">X Points</h3>
+<ul>
+	<li>Vector of random variable realizations for which the PDF values are given to the property below, i.e., <a href="#PDFPoints">PDF Points</a> in a &ldquo;User Defined&rdquo; distribution.</li>
+</ul>
+
+<h3 id="PDFPoints">PDF Points</h3>
+<ul>
+	<li>Vector of PDF values of the random variable realizations that are given to the property above, i.e., <a href="#XPoints">X Points</a> in a &ldquo;User Defined&rdquo; distribution.</li>
+</ul>
+
+
+<h2>Read-only Properties</h2>
+
+<h3 id="AlphaImportanceMeasure">Alpha Importance Measure</h3>
+<ul>
+	<li>Element of the \(\boldsymbol{\alpha}\) importance vector, computed in <a href="RFORMAnalyzer.html">FORM</a>, that corresponds to this random variable.</li>
+	<li>\(\boldsymbol{\alpha}\) is a unit vector that indicates the relative importance of the random variables involved in a <a href="RFORMAnalyzer.html">FORM</a> analysis when correlations are neglected/non-existent.</li>
+	<li>For more information, see  <a href="#DerKiureghian2005">Der Kiureghian (2005).</a></li>
+</ul>
+
+<h3 id="GammaImportanceMeasure">Gamma Importance Measure</h3>
+<ul>
+	<li>Element of the \(\boldsymbol{\gamma}\) importance vector, computed in <a href="RFORMAnalyzer.html">FORM</a>, that corresponds to this random variable.</li>
+	<li>\(\boldsymbol{\gamma}\) is a unit vector that indicates the relative importance of the random variables involved in a <a href="RFORMAnalyzer.html">FORM</a> analysis when correlations are considered.</li>
+	<li>For more information, see  <a href="#DerKiureghian2005">Der Kiureghian (2005).</a></li>
+</ul>
+
+<h3 id="FOSMImportanceMeasure">FOSM Importance Measure</h3>
+<ul>
+	<li>Element of the FOSM importance vector, \(\boldsymbol{\omega}\), computed in <a href="RFOSMAnalyzer.html">FOSM</a>, that corresponds to this random variable.</li>
+	<li>\(\boldsymbol{\omega}\) is a unit vector that indicates the relative importance of the random variables involved in a <a href="RFOSMAnalyzer.html">FOSM</a> analysis.</li>
+	<li>For more information, see  <a href="#DerKiureghian2005">Der Kiureghian (2005).</a></li>
+	<li>\(\boldsymbol{\omega}\) is computed as</li>
+	$$\boldsymbol{\omega}\  =  - {\nabla {g^T}{\mathbf{D _ X}} \over {\left\| {\nabla {g^T}{\mathbf{D_X}}} \right\|}}$$
+	where \(\nabla {g}\) = gradient of the limit-state function, \(g\), and \(\mathbf{D_X}\) = standard deviation matrix of random variables, \(\mathbf{X}\).
+</ul>
+
+<h3 id="DeltaSensitivityMeasure">Delta Sensitivity Measure</h3>
+<ul>
+	<li>Element of the \(\boldsymbol{\delta}\) sensitivity vector, that corresponds to this random variable.</li>
+	<li>\(\boldsymbol{\delta}\) is a dimensionless vector that is computed by multiplying the standard deviation matrix by the gradient of the reliability index with respect to the mean of random variables.</li>
+	<li>For more information, see  <a href="#DerKiureghian2005">Der Kiureghian (2005).</a></li>
+</ul>
+
+<h3 id="EtaSensitivityMeasure">Eta Sensitivity Measure</h3>
+<ul>
+	<li>Element of the \(\boldsymbol{\eta}\) sensitivity vector, that corresponds to this random variable</li>
+	<li>\(\boldsymbol{\eta}\) is a dimensionless vector that is computed by multiplying the standard deviation matrix by the gradient of the reliability index with respect to the standard deviation of random variables</li>
+	<li>For more information, see  <a href="#DerKiureghian2005">Der Kiureghian (2005)</a></li>
+</ul>
+
+<h3 id="KappaSensitivityMeasure">Kappa Sensitivity Measure</h3>
+<ul>
+	<li>Element of the \(\boldsymbol{\kappa}\) sensitivity vector, that corresponds to this random variable.</li>
+	<li>\(\boldsymbol{\kappa}\) is a dimensionless vector equal to the gradient of the reliability index with respect to the coefficient of variation of random variables.</li>
+</ul>
+
+<h3 id="BetaSensitivityWrtMean">Beta Sensitivity Wrt Mean</h3>
+<ul>
+	<li>Derivative of the reliability index, \({\beta}\), with respect to the mean of this random variable</li>
+</ul>
+
+<h3 id="BetaSensitivityWrtStandardDeviation">Beta Sensitivity Wrt Standard Deviation</h3>
+<ul>
+	<li>Derivative of the reliability index, \({\beta}\), with respect to the standard deviation of this random variable</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h3 id="PlotPDF">Plot PDF</h3>
+<ul>
+	<li>Plots the probability density function of the random variable in the range of mean ± three standard deviations.</li>
+</ul>
+
+<h3 id="PlotCDF">Plot CDF</h3>
+<ul>
+	<li>Plots the cumulative distribution function of the random variable in the range of mean ± three standard deviations.</li>
+</ul>
+
+<h3 id="PlotInverseCDF">Plot Inverse CDF</h3>
+<ul>
+	<li>Plots the inverse cumulative distribution function of the random variable in the range of mean ± three standard deviations</li>
+</ul>
+
+<h3 id="GetPDF">Get PDF</h3>
+<ul>
+	<li>Prints the probability density function value for a given random variable realization on the output pane.</li>
+</ul>
+
+<h3 id="GetCDF">Get CDF</h3>
+<ul>
+	<li>Prints the cumulative distribution function value for a given random variable realization on the output pane.</li>
+</ul>
+
+<h3 id="GetInverseCDF">Get Inverse CDF</h3>
+<ul>
+	<li>Prints the inverse cumulative distribution function value, i.e., the realization, for a given probability on the output pane.</li>
+</ul>
+
+<h2>Types of Distribution</h2>
+
+<ul>
+	<li><a href="#BetaDist">Beta Distribution</a></li>
+	<li><a href="#ChiSquaredDist">Chi-Squared Distribution</a></li>
+	<li><a href="#ExponentialDist">Exponential Distribution</a></li>
+	<li><a href="#GammaDist">Gamma Distribution</a></li>
+	<li><a href="#GumbelDist">Gumbel Distribution</a></li>
+	<li><a href="#LaplaceDist">Laplace Distribution</a></li>
+	<li><a href="#LogisticDist">Logisitic Distribution</a></li>
+	<li><a href="#LognormalDist">Lognormal Distribution</a></li>
+	<li><a href="#NormalDist">Normal Distribution</a></li>
+	<li><a href="#RayleighDist">Rayleigh Distribution</a></li>
+	<li><a href="#tDist">t Distribution</a></li>
+	<li><a href="#UniformDist">Uniform Distribution</a></li>
+	<li><a href="#WeibullDist">Weibull Distribution</a></li>
+	<li><a href="#WaldDist">Wald Distribution</a></li>
+	<li><a href="#LevyDist">Levy Distribution</a></li>
+	<li><a href="#IrvinHallDist">Irwin-Hall Distribution</a></li>
+	<li><a href="#BirnbaumSaundersDist">Birnbaum-Saunders Distribution</a></li>
+	<li><a href="#Type2GumbelDist">Type-2 Gumbel Distribution</a></li>
+	<li><a href="#ParetoDist">Pareto Distribution</a></li>
+	<li><a href="#FDist">F Distribution</a></li>
+	<li><a href="#ArcsineDist">Arcsine Distribution</a></li>
+
+</ul>
+
+<h3 id="BetaDist">Beta Distribution</h3>
+<img src="images/Betadist.JPG" alt=""/>
+
+<h3 id="ChiSquaredDist">Chi-Squared Distribution</h3>
+<img src="images/chisquareddist.JPG" alt=""/>
+
+<h3 id="ExponentialDist">Exponential Distribution</h3>
+<img src="images/exponentialdist.JPG" alt=""/>
+
+<h3 id="GammaDist">Gamma Distribution</h3>
+<img src="images/Gammadist.JPG" alt=""/>
+
+<h3 id="GumbelDist">Gumbel Distribution</h3>
+<img src="images/Gumbeldist.JPG" alt=""/>
+
+<h3 id="LaplaceDist">Laplace Distribution</h3>
+<img src="images/laplacedist.JPG" alt=""/>
+
+<h3 id="LogisticDist">Logistic Distribution</h3>
+<img src="images/logisticdist.JPG" alt=""/>
+
+<h3 id="LognormalDist">Lognormal Distribution</h3>
+<img src="images/lognormaldist.JPG" alt=""/>
+
+<h3 id="NormalDist">Normal Distribution</h3>
+<img src="images/Normaldist.JPG" alt=""/>
+
+<h3 id="RayleighDist">Rayleigh Distribution</h3>
+<img src="images/Rayleighdist.JPG" alt=""/>
+
+<h3 id="tDist">t Distribution</h3>
+<img src="images/tdist.JPG" alt=""/>
+
+<h3 id="UniformDist">Uniform Distribution</h3>
+<img src="images/Uniformdist.JPG" alt=""/>
+
+<h3 id="WeibullDist">Weibull Distribution</h3>
+<img src="images/Weibulldist.JPG" alt=""/>
+
+<h3 id="WaldDist">Wald Distribution</h3>
+<img src="images/walddist.JPG" alt=""/>
+
+<h3 id="LevyDist">Levy Distribution</h3>
+<img src="images/levydist.JPG" alt=""/>
+
+<h3 id="IrvinHallDist">Irvin-Hall Distribution</h3>
+<img src="images/irvinhalldist.JPG" alt=""/>
+
+<h3 id="BirnbaumSaundersDist">Birnbaum-Saunders Distribution</h3>
+<img src="images/birnbaumsaundersdist.JPG" alt=""/>
+
+<h3 id="Type2GubmelDist">Type-2 Gumbel Distribution</h3>
+<img src="images/type2gumbeldist.JPG" alt=""/>
+
+<h3 id="ParetoDist">Pareto Distribution</h3>
+<img src="images/paretodist.JPG" alt=""/>
+
+<h3 id="FDist">F Distribution</h3>
+<img src="images/fdist.JPG" alt=""/>
+
+<h3 id="ArcsineDist">Arcsine Distribution</h3>
+<img src="images/arcsinedist.JPG" alt=""/>
+
+
+<h2>References</h2>
+<ul>
+	<li id="DerKiureghian2005">Der Kiureghian, A. (2005). First-and second-order reliability methods. In E. Nikolaidis, D. M. Ghiocel, & S. Singhal (Eds.), Engineering design reliability handbook. Boca Raton, Florida: CRC Press</li>
+	<li id="DerKiureghian2009">Der Kiureghian, A., & Ditlevsen, O. (2009). Aleatory or epistemic? Does it matter? Structural Safety, 31(2), 105–112</li>
+</ul>
+
+</body>
+
+</html>

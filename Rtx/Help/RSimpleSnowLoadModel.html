@@ -1,0 +1,120 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Simple Snow Load Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Simple Snow Load Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RSimpleSnowLoadModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Snow > Simple Snow Load</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	$$\eqalign{
+  & d = {{{d_p}} \over 2} \cdot \left( {1 + \sin \left( {2\pi  \cdot {{t - {m_s}} \over {{m_e} - {m_s}}} - {\pi  \over 2}} \right)} \right) \cdot \varepsilon   \cr 
+  & q = \rho  \cdot d \cr} $$
+
+    <li>For further information on this model, refer to <a href="#MahsuliHaukaas"> Mahsuli, M., Haukaas, T. (2013)</a>.</li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MaximumDepth">Maximum Depth</h3>
+<ul>
+	<li>\({d_p}\) = Peak seasonal snow depth </li>
+</ul>
+
+<h3 id="StartMonth">Start Month</h3>
+<ul>
+	<li>\({m_s}\) = End month of the snow season (given as a real number)</li>
+</ul>
+
+<h3 id="EndMonth">End Month</h3>
+<ul>
+	<li>\({m_e}\) = End month of the snow season (given as a real number)</li>
+</ul>
+
+<h3 id="Density">Density</h3>
+<ul>
+	<li>\({\rho}\) = Snow density</li>
+</ul>
+
+<h3 id="Time">Time</h3>
+<ul>
+	<li>\({t}\) = Current time, typically a Time parameter</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = Model error</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({d}\) = Snow depth</li>
+	<li>\({q}\) = Snow load per unit area
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="MahsuliHaukaas"> Mahsuli, M., Haukaas, T. (2013) “Computer program for multimodel reliability and optimization analysis,” ASCE Journal of Computing in Civil Engineering, 27(1), pp. 87-98 (<a href="https://doi.org/10.1061/(ASCE)CP.1943-5487.0000204">DOI</a>)</li>
+	</ul>
+
+
+</body>
+
+</html>

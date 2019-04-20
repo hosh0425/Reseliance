@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Programming Fundamentals</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Programming Fundamentals</h1>
+
+
+<h2>Scripting Basics</h2>
+
+<ul>
+<li>Rtx scripting is based on C++ programming language.</li>
+<li>All programming basics such as conditional controls, loop controls, program terminations and other commands are identical to those of C++. More information could be found at  <a href="http://www.inrisk.ubc.ca/">www.inrisk.ubc.ca</a> </li>
+<li>For commenting on script one can use “%” or “//” or “#”</li>
+</ul>
+
+
+<h2>Format of Input Files</h2>
+<ul>
+	<li>Input files generally consist of following sections, examples provided for each part:</li>
+	<h3>The Definition of variables</h3>
+	<p Align="leftt">// RANDOM VARIABLES</p>
+<p>RContinuousRandomVariable |ObjectName: Fc1RV |CurrentValue: 4 |DistributionType: Lognormal (zeta, sigma) |Mean: 4 |StandardDeviation: 0.16</p>
+<p>RContinuousRandomVariable |ObjectName: Fc2RV |CurrentValue: 5.2 |DistributionType: Lognormal (zeta, sigma) |Mean: 5.2 |StandardDeviation: 0.208</p>
+<p>RContinuousRandomVariable |ObjectName: FyRV |CurrentValue: 60 |DistributionType: Lognormal (zeta, sigma) |Mean: 60 |StandardDeviation: 2.4</p>
+<h3>The Definition of Responses ,Models and Functions</h3>
+<p>// RESPONSES</p>
+<p>RFileResponse |ObjectName: Delta |Model: FrameModel |ResponseFile: Drift.txt |Maximum: true |Row: 0 |Column: 2</p>
+<p>// MODELS</p>
+<p>ROpenSeesModel |ObjectName: FrameModel |DisplayOutput: true |ParameterList: Fc1RV; Fc2RV; FyRV;  |ExecutableFile: OpenSees.exe |InputFile: Frame.tcl</p>
+<p>// FUNCTIONS</p>
+<p>RFunction |ObjectName: g |Expression: 324 * 0.014 - Delta |GradientAnalysisType: FiniteDifference |PerturbationFactor: 1000 </p>
+<p>RFunction |ObjectName: DeltaFn |Expression: Delta |GradientAnalysisType: FiniteDifference |PerturbationFactor: 1000 </p>
+<h3>The Definition of Analyses Required Tools </h3>
+<p>// ANALYSIS TOOLS</p>
+<p>RStepperNonlinSingleConstrSolver |ObjectName: mySolver  |StepSizeSearcher: myStepSizeSearcher |StepDirectionSearcher: myStepDirectionSearcher |Transformer: myTransformer |ConvergenceChecker: myConvergenceChecker |MaximumIterations: 100 |OutputDisplayLevel: Minimum</p>
+<p>RArmijoStepSizeSearcher |ObjectName: myStepSizeSearcher |OutputDisplayLevel: Minimum |Transformer: myTransformer |MeritChecker: myMeritChecker |MaximumReductions: 10 </p>
+<p>RAdkZhangMeritChecker |ObjectName: myMeritChecker |Multiplier: 2 |Adder: 10 |Factor: 0.5</p>
+<p>RHLRFStepDirectionSearcher |ObjectName: myStepDirectionSearcher</p>
+<p>RNatafTransformer |ObjectName: myTransformer |OutputDisplayLevel: None</p>
+<p>RStandardConvergenceChecker |ObjectName: myConvergenceChecker |E1: 0.001 |E2: 0.001 |OutputDisplayLevel: Minimum</p>
+<p>RIndependentNormalRandomNumberGenerator |ObjectName: myRandomNumberGenerator |StartPoint: Origin |StandardDeviation: 1 |Transformer: myTransformer</p>
+<p>RHistogramAccumulator |ObjectName: myHistogramAccumulator |MaximumIterations: 100000 |OutputDisplayLevel: None |PlottingInterval : 100 |NumberOfBins: 100</p>
+<p>RFailureProbabilityAccumulator |ObjectName: myFailureAccumulator |MaximumIterations: 1000000 |OutputDisplayLevel: None |TargetCoefficientOfVariation: 0.05 |RandomNumberGenerator: myRandomNumberGenerator |PlottingInterval : 100</p>
+<h3>The Definition of Analyses Algorithms</h3>	
+<p>// CREATE THE ORCHESTRATING ANALYSIS ALGORITHMS</p>
+<p>RFORMAnalyzer |ObjectName: myFORMAnalysis |LimitStateFunction: g |NonlinearSingleConstraintSolver: mySolver |ComputeRandomVariableSensitivities: true |ComputeDecisionVariableSensitivities: true |ComputeModelResponseStandardDeviationSensitivities: true |PrintSensitivities: false |CorrectProbabilityWithFirstPrincipalCurvature: false</p>
+<p>RSamplingAnalyzer |ObjectName: mySamplingAnalysis  |RandomNumberGenerator: myRandomNumberGenerator |Transformer: myTransformer |Accumulator: myHistogramAccumulator |FunctionList: DeltaFn; </p>
+<p>RFunctionEvaluationAnalyzer |ObjectName: myFunctionEvaluationAnalysis |Function: g |EvaluateGradient: false |SetRandomVariablesToMean: false |PrintRandomVariableList: false |PlotModelFlowchart: true</p>
+<h2>Automating Rtx Analyses</h2>
+<li>To run analyses using “CMP” on Microsoft Windows or “Terminal” on Mac OS X, one can use following steps:</li>
+<li>Copy the script in Rtx executive directory and open CMD.</li>
+<li>One can use “cd” command in CMD to change its current directory that usually is the Users’ folder, Or use Rt.lnk which would lead to Rt.exe directory.</li>
+<img src="images/AutoRUN1.JPG" alt=""/>
+<li>To have analyses run automatically, the script must be edited by adding following command:</li>
+<p>Analyze myAnalayzerName</p>
+<li>To print the output in a text file, the script must be edited by adding following command:</li>
+<p>Output FileName.txt</p>
+<li>To exit Rtx automatically after analyses, the script must be edited by adding following command:</li>
+<p>Exit</p>
+<li>For several reasons, it’s more convenient to run analyses without opening Rtx GUI, for that aim one can enter “nogui” in CMD, and the output will be printed on CMD instead of opening Rtx GUI.</li>
+
+
+<img src="images/AutoRUN2.JPG" alt=""/>
+
+</ul>
+
+
+</body>
+
+</html>

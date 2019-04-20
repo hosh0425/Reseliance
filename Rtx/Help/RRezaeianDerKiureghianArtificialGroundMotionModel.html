@@ -1,0 +1,149 @@
+﻿<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Rezaeian DerKiureghian Artificial Ground Motion Model</title>
+
+    <link href="images/style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+
+
+<body>
+
+
+    <h1>Rezaeian DerKiureghian Artificial Ground Motion Model</h1>
+
+
+    <h2>Class Name</h2>
+
+    <ul>
+        <li>RRezaeianDerKiureghianArtificialGroundMotionModel</li>
+    </ul>
+
+
+    <h2>Location in Objects Pane</h2>
+    <ul>
+        <li>Model > Hazard > Earthquake > Intensity > Rezaeian DerKiureghian Artificial Ground Motion</li>
+    </ul>
+
+
+    <h2>Model Description</h2>
+
+    <h3>Model Form</h3>
+    <ul>
+        This model generates random artificial ground motions using the method presented by Rezaeian and Der Kiureghian (2010). This model generates the artificial ground motion using the following equation:
+
+
+
+        $$ \eqalign{
+        &{x}(t) = q(t,\alpha_g)\cdot {1 \over \sigma_h(t)} \int^t_ {-\infty}h[t-\tau,\lambda(\tau)]\omega(\tau)d\tau
+        }$$
+
+        where \(q(t,\alpha_g) \) = time-modulating function in which the \(\alpha_g\) vector controls the intensity, shape, and duration of the motion; \(\sigma^2_h(t)\) = variance of the integral process; \(h[t-\tau,\lambda(\tau)]\) = impulse response function of the filter whose time-varying parameters are collected in the vector \(\lambda(\tau)\); and \(\omega\) = white-noise process. The elements of the αg and \(\lambda(\tau)\) vectors depend on six key characteristics of the ground motion. The \(\alpha_g\) vector includes three elements that depend on the Arias intensity, \(\bar{I_a}\), the effective duration of the motion, \(D_{5−95}\), and the time at the middle of the strong motion phase, \(t_{mid}\). The \(\lambda(\tau)\) vector includes two time functions that depend on the filter frequency at \(t_{mid}\), \(\omega_{mid}\), the rate of the change of the filter frequency in time, \(\omega'\), and the filter damping, \(\xi_f\)­. Each of these six key characteristics is computed using the predictive equations proposed by Rezaeian and Der Kiureghian (2010). The inputs of the equations are: fault type, distance to the rupture location, shear wave velocity, and moment magnitude.
+
+        <li>For further information on this model, refer to <a href="#RezaeianKiureghian"> Rezaeian, S., Der Kiureghian, M. (2010)</a>.</li>
+
+
+    </ul>
+
+    <h3>DDM sensitivities</h3>
+    <ul>
+        <li>No</li>
+    </ul>
+
+
+    <h2>Properties</h2>
+
+    <h3 id="ObjectName">Object Name</h3>
+    <ul>
+        <li>Name of the object in Rtx</li>
+        <li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;)</li>
+        <li>The name is unique and case-sensitive</li>
+    </ul>
+
+    <h3 id="DisplayOutput">Display Output</h3>
+    <ul>
+        <li>Determines whether the model is allowed to print messages to the Output Pane</li>
+    </ul>
+
+
+    <h3 id="WhiteNoiseVariableList">White Noise Variable List</h3>
+    <ul>
+        <li> List of independent standard normal random variables</li>
+    </ul>
+
+    <h3 id="FaultType"> Fault Type</h3>
+    <ul>
+        <li> \(F\) = 0 if strike-slip fault and 1 if reverse fault.
+ </li>
+    </ul>
+
+    <h3 id="MomentMagnitude"> Moment Magnitude </h3>
+    <ul>
+        <li> \(M\) =  moment magnitude </li>
+    </ul>
+
+    <h3 id="RuptureLocation"> Rupture Location </h3>
+    <ul>
+        <li> Rupture location = coordinates of the rupture location </li>
+    </ul>
+
+    <h3 id="StructureLocation"> Structure Location </h3>
+    <ul>
+        <li>
+            Structure location = coordinates of the structure location
+        </li>
+    </ul>
+
+
+    <h3 id="ShearWaveVelocity">Shear Wave Velocity</h3>
+    <ul>
+        <li> \(V_{s30} (m/s)\) = shear-wave velocity of the top 30 meters of the soil.
+</li>
+    </ul>
+
+    <h3 id="V1IntereventOrTotalModelError">Intervent Model Error</h3>
+    <ul>
+        <li>\(v_i\) model error \((i=1,…,6)\) = realizations of the model errors for six key characteristics based on the distributions presented in Rezaeian Der Kiureghian (2010)</li>
+    </ul>
+
+    <h3 id="Duration">Duration</h3>
+    <ul>
+        <li>d = Duration of the motion</li>
+    </ul>
+
+    <h3 id="TimeStep">Time Step</h3>
+    <ul>
+        <li>∆t = time increments in the ground motion time history</li>
+    </ul>
+
+
+   
+    <h2>Output (Automatically generated generic response object)</h2>
+    <ul>
+        <li>A vector of simulated ground motion in unit of ground acceleration (g). It is saved in the form of a text file near the input file. </li>
+
+    </ul>
+
+
+    <h2>Right-click Menu</h2>
+
+    <h3 id="Remove">Remove</h3>
+    <ul>
+        <li>Removes the object.</li>
+    </ul>
+
+    <h2>References</h2>
+    <ul>
+        <li id="RezaeianKiureghian"> Rezaeian, S., Der Kiureghian, M. (2010) “Simulation of synthetic ground motions for specified earthquake and site characteristics,” Earthquake Engineering & Structural Dynamics, 39(10), pp. 1155–1180 (<a href="https://doi.org/10.1002/eqe.997">DOI</a>)</li>
+    </ul>
+
+
+</body>
+
+</html>

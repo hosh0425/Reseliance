@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Atkinson Boore 2003 Intensity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Atkinson Boore 2003 Intensity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RAtkinsonBoore2003IntensityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Intensity > Atkinson Boore 2003 Intensity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the spectral acceleration or the peak ground acceleration at specified locations for given magnitude and hypocentre location of several earthquake sources as input, based on the Atkinson-Boore (2003) attenuation relation.</li>
+	<li>For more information, see <a href="#BooreAtkinson2003">Boore-Atkinson (2003)</a></li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MagnitudeList">Magnitude List</h3>
+<ul>
+	<li>Magnitudes of various earthquake sources</li>
+</ul>
+
+<h3 id="HypocentreLocationList">Hypocentre Location List </h3>
+<ul>
+	<li>Hypocenter locations of earthquake sources, which automatically will yield the radius \({R}\) to the various output locations</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = Model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="EventType">Event Type</h3>
+<ul>
+	<li>Type of the earthquake event that can either be Interface or In-slab.</li>
+</ul>
+
+<h3 id="ResponseType">Response Type</h3>
+<ul>
+	<li>Type of the response than can either be \({S_a}\) or \({PGA}\).</li>
+</ul>
+
+<h3 id="Smoothness">Smoothness</h3>
+<ul>
+	<li>&ldquo;Smoothed&rdquo; option will smooth the kinks in the model and the &ldquo;Original&rdquo; option will use the model as it is.</li>
+</ul>
+
+<h3 id="Periodlist">Period List</h3>
+<ul>
+	<li>List of the natural periods at which the intensity is evaluated</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here)</li>
+</ul>
+
+<h3 id="ShearWaveVelocityList">Shear Wave Velocity List</h3>
+<ul>
+	<li>List of the shear wave velocities at the specified locations</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>Earthquake intensities (as many as the locations provided in the input).</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="BooreAtkinson2003">Atkinson, G. M., & Boore, D. M. (2003). Empirical ground-motion relations for subduction-zone earthquakes and their application to Cascadia and other regions. Bulletin of the Seismological Society of America, 93(4), 1703–1729</li>
+</ul>
+
+</body>
+
+</html>
+

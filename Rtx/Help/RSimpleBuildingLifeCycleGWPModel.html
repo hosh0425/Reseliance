@@ -1,0 +1,101 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Simple Building Life Cycle GWP Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Simple Building Life Cycle Global Warming Potential Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RSimpleBuildingLifeCycleGWPModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Environmental > Simple Building Life Cycle Global Warming Potential</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the lifecycle water usage in a building at a coarse level of detail.</li>
+	<li>Entire lifecycle</li>
+	$${GWP_{LC}} = {i_n}({E_{total}}-{E_{OP}}) + {E_{OP}}{i_{OP}}$$
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="LifeCycleEnergy">Life Cycle Energy</h3>
+<ul>
+	<li>\({E_{total}}\) = The entire life cycle energy for a building in J</li>
+</ul>
+
+<h3 id="OperationEnergy">Operation Energy</h3>
+<ul>
+	<li>\({E_{OP}}\) = The total energy used over the operation stage of building‘s life cycle J</li>
+</ul>
+
+<h3 id="GWPIntensityOperation">GWP Intensity Operation</h3>
+<ul>
+	<li>\({i_{OP}}\) = The GWP intensity of operational phases in kgCO2e/ J</li>
+</ul>
+
+<h3 id="GWPIntensityNonOperation">GWP Intensity Non Operation</h3>
+<ul>
+	<li>\({i_n}\) = The GWP intensity of non operational phases in kgCO2e/ J</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\({E_{GWP}}\) = The lifecycle energy usage in a building regarded to global warming potential in J</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

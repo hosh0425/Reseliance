@@ -1,0 +1,121 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Concrete Moment Frame Exterior Joint Damage Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Concrete Moment Frame Exterior Joint Damage Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RConcreteMomentFrameExteriorJointDamageModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Economic > Concrete Moment Frame Exterior Joint Damage</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	This model predicts damage ratio in Concrete Moment Frame Exterior Joint:
+
+	$$ {\Phi^{-1}}(\eta) = -0.67 + {\theta_1}.(\ln(\delta) +3.83) +  \epsilon \cdot \sigma$$
+
+	where, \({\Phi^{-1}}\) is the probit function.
+    <li>For further information on this model, refer to <a href="#AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019)</a> and <a href="#AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018)</a>. </li>
+
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+
+	
+
+
+
+<h3 id="InterstoryDriftRatio">Inter-story Drift Ratio</h3>
+<ul>
+	<li>\({\delta}\) = Inter-story drift ratio</li>
+</ul>
+
+<h3 id="Theta1">Theta1</h3>
+<ul>
+	<li>\({\theta_1}\) = Model parameter</li>
+</ul>
+
+<h3 id="Sigma">Sigma</h3>
+<ul>
+	<li>\({\sigma}\) = Standard deviation of the model error</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = model error; a standard normal random variable
+</li>
+</ul>
+
+
+
+<h2>Output (Automatically generated generic response object)</h2>
+<ul>
+	<li>\({\eta}\) = Damage ratio </li>
+
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019) “Component damage models for detailed seismic risk analysis using structural reliability methods,” Structural Safety, 76, pp. 108-122 (<a href="https://doi.org/10.1016/j.strusafe.2018.08.004">DOI</a>)</li>
+		<li id="AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018) “Detailed seismic risk analysis of buildings using structural reliability methods,” Probabilistic Engineering Mechanics, 53, pp. 23-38 (<a href="https://doi.org/10.1016/j.probengmech.2018.04.001">DOI</a>)</li>
+	</ul>
+
+
+
+</body>
+
+</html>

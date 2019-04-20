@@ -1,0 +1,238 @@
+﻿<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Injury Social Loss Model</title>
+
+    <link href="images/style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+
+
+<body>
+
+
+    <h1>Injury Social Loss Model</h1>
+
+
+    <h2>Class Name</h2>
+
+    <ul>
+        <li>RInjurySocialLossModel</li>
+    </ul>
+
+
+    <h2>Location in Objects Pane</h2>
+    <ul>
+        <li> Model > Consequence > Social > Injury Social Loss</li>
+    </ul>
+
+
+    <h2>Model Description</h2>
+
+    <h3>Model Form</h3>
+    <ul>
+        This model predicts the social loss due to fatalities and injuries that occur during an event. The loss is converted to an equivalent monetary value. The number of injuries is predicted using the following equation:
+
+
+       \[{{N}_{\text{Inj}}}({{\eta }_{i}})=\left\{ \begin{array}{*{35}{l}}
+   0 & {{\eta }_{i}}<{{\eta }_{\text{Inj}}}  \\
+   {{\rho }_{\text{Inj}}}\cdot {{\rho }_{P}}\cdot {{A}_{\text{Aff,}i}} & {{\eta }_{i}}\ge {{\eta }_{\text{Inj}}}  \\
+\end{array} \right.\]
+
+
+The number of fatalities follows a same equation, as follows:
+
+
+                                            \[{{N}_{\text{Fat}}}({{\eta }_{i}})=\left\{ \begin{array}{*{35}{l}}
+   0 & {{\eta }_{i}}<{{\eta }_{\text{Fat}}}  \\
+   {{\rho }_{\text{Fat}}}\cdot {{\rho }_{P}}\cdot {{A}_{\text{Aff,}i}} & {{\eta }_{i}}\ge {{\eta }_{\text{Fat}}}  \\
+\end{array} \right.\]
+
+
+The equivalent monetary value is obtained by multiplying the number of injuries by the cost of one injury and the number of fatalities by the cost of one fatality.
+
+    <li>For further information on this model, refer to <a href="#AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019)</a> and <a href="#AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018)</a>. </li>
+
+
+
+    </ul>
+
+    <h3>DDM sensitivities</h3>
+    <ul>
+        <li>No</li>
+    </ul>
+
+
+    <h2>Properties</h2>
+
+    <h3 id="ObjectName">Object Name</h3>
+    <ul>
+        <li>Name of the object in Rtx</li>
+        <li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;)</li>
+        <li>The name is unique and case-sensitive</li>
+    </ul>
+
+    <h3 id="DisplayOutput">Display Output</h3>
+    <ul>
+        <li>Determines whether the model is allowed to print messages to the Output Pane</li>
+    </ul>
+
+
+  
+
+    <h3 id="CostOfOneInjury">  Cost of One Injury </h3>
+    <ul>
+        <li>
+            Cost of One Injury, usually computed as a fraction of the value of a statistical life
+
+        </li>
+    </ul>
+
+
+    <h3 id="CostOfOneFatality">  Cost of One Fatality </h3>
+    <ul>
+        <li>
+            Cost of One Fatality, i.e., value of a statistical life
+
+        </li>
+    </ul>
+
+
+    <h3 id="DamageRatioList"> Damage Ratio List </h3>
+    <ul>
+        <li>
+             A vector of damage ratios predicted in upstream models
+
+        </li>
+    </ul>
+
+
+    <h3 id="AffectedAreas"> Affected Areas </h3>
+    <ul>
+        <li>
+            \(A_{Aff,I}\) = a vector with size equal to Damage Ratio List, the elements of which determine the affected area around each damage component
+
+
+        </li>
+    </ul>
+
+
+    <h3 id="PopulationDensityList">  Population Density list </h3>
+    <ul>
+        <li>
+            \(\rho_{P}\) = a vector with size equal to Damage Ratio List, each element of which shows the population density around the damaged component at the event instant
+
+
+        </li>
+    </ul>
+
+
+    <h3 id="InjuryRate">  Injury Rate </h3>
+    <ul>
+        <li>
+            \(\rho_{Inj}\) = a rate showing the ratio of people injured in the affected area of this type of component
+
+        </li>
+    </ul>
+
+
+    <h3 id="FatalityRate"> Fatality Rate </h3>
+    <ul>
+        <li>
+            \(\rho_{Fat}\) = a rate showing the ratio of people died in the affected area of this type of component 
+
+
+
+        </li>
+    </ul>
+    <h3 id="InjuryDamageRatioThresholds"> Injury Damage Ratio Thresholds </h3>
+    <ul>
+        <li>
+           A vector containing \(\eta_{Inj}\)
+
+
+
+        </li>
+    </ul>
+    <h3 id="FatalityDamageRatioThresholds"> Fatality Damage Ratio Thresholds</h3>
+    <ul>
+        <li>
+           A vector containing \(\eta_{Fat}\)
+        </li>
+    </ul>
+
+
+
+    <h2>Output (Automatically generated generic response object)</h2>
+    <ul>
+
+        <h3 id="NumberOfInjuriesResponse"> Number of Injuries Response</h3>
+        <ul>
+            <li>
+                Number of injuries
+            </li>
+            <li>
+                The output is an automatically generated generic response object, which takes the object name of the model plus “NumberOfInjuriesResponse”.
+            </li>
+        </ul>
+
+
+        <h3 id="NumberOfFatalitiesResponse"> Number of Fatalities Response</h3>
+        <ul>
+            <li>
+                Number of fatalities
+            </li>
+            <li>
+                The output is an automatically generated generic response object, which takes the object name of the model plus “NumberOfFatalitiesResponse”.
+            </li>
+        </ul>
+
+
+
+        <h3 id="InjuryLossResponse"> Injury Loss Response</h3>
+        <ul>
+            <li>
+                Cost of injuries
+            </li>
+            <li>
+                The output is an automatically generated generic response object, which takes the object name of the model plus “InjuryLossResponse”.
+            </li>
+        </ul>
+
+
+        <h3 id="FatalityLossResponse"> Fatality Loss Response</h3>
+        <ul>
+            <li>
+                Cost of fatalities
+            </li>
+            <li>
+                The output is an automatically generated generic response object, which takes the object name of the model plus “FatalityLossResponse”.
+            </li>
+        </ul>
+
+       
+    </ul>
+
+
+    <h2>Right-click Menu</h2>
+
+    <h3 id="Remove">Remove</h3>
+    <ul>
+        <li>Removes the object.</li>
+    </ul>
+
+    <h2>References</h2>
+    <ul>
+        <li id="AghababaeiMahsuli2019">Aghababaei, M., Mahsuli, M. (2019) “Component damage models for detailed seismic risk analysis using structural reliability methods,” Structural Safety, 76, pp. 108-122 (<a href="https://doi.org/10.1016/j.strusafe.2018.08.004">DOI</a>)</li>
+        <li id="AghababaeiMahsuli2018">Aghababaei, M., Mahsuli, M. (2018) “Detailed seismic risk analysis of buildings using structural reliability methods,” Probabilistic Engineering Mechanics, 53, pp. 23-38 (<a href="https://doi.org/10.1016/j.probengmech.2018.04.001">DOI</a>)</li>
+    </ul>
+
+
+</body>
+
+</html>

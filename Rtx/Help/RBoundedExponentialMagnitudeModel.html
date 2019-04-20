@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Bounded Exponential Magnitude Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Bounded Exponential Magnitude Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RBoundedExponentialMagnitudeModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Magnitude > Bounded Exponential Magnitude</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>The basis for this model is the following PDF:</li>
+	$$f(m) = {{\beta  \cdot \exp \left[ { - \beta  \cdot (m - {M_{\min }})} \right]} \over {1 - \exp \left[ { - \beta  \cdot ({M_{\max }} - {M_{\min }})} \right]}} \text{   for   }{M_{\min }} \le m \le {M_{\max }}$$
+	where \({\beta}\) is the model parameter that depends on the relative frequency of different magnitudes.
+	<li>In order to obtain the  outcome of \(m\), a standard normal random variable, \({\theta}\), is given to the model, and transformed according to the probability-preserving transformation \(F(m)={\Phi}({\theta})\), where \(F(m)\) is the CDF corresponding to the given PDF.</li>
+	<li>Hence, the model reads</li>
+	$$m=-\frac{1}{\beta}\ln \left[ 1-\Phi (\theta )\cdot \left( 1-\exp \left( -{\beta}\left( {{M}_{\max }}-{{M}_{\min }} \right) \right) \right) \right]+{{M}_{\min }}$$
+    <li>For further information on this model, refer to <a href="#RahimiMahsuli">Rahimi, H., Mahsuli, M. (2019)</a> and <a href="#MahsuliRahimiBakhshi">Mahsuli, M., Rahimi, H., Bakhshi, A. (2019)</a>.</li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>Yes</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MinimumMagnitude">Minimum Magnitude</h3>
+<ul>
+	<li>\({M _{\min}}\) = Magnitude Lower bound</li>
+</ul>
+
+<h3 id="MaximumMagnitude">Maximum Magnitude</h3>
+<ul>
+	<li>\({M _ {\max}}\) = Magnitude upper bound</li>
+</ul>
+
+<h3 id="Beta">Beta</h3>
+<ul>
+	<li>\({\beta}\) = Model parameter, usually in the range of 1 to 2</li>
+</ul>
+
+<h3 id="Theta">Theta</h3>
+<ul>
+	<li>\({\theta}\) = A standard-normal random variable</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>\(m\) = Magnitude</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="MahsuliHaukaas2013">Mahsuli, M., & Haukaas, T. (2013). Seismic risk analysis with reliability methods, part I: Models. Structural Safety, 42, 54–62</li>
+</ul>
+
+    <h2>References</h2>
+    <ul>
+        <li id="RahimiMahsuli">Rahimi, H., Mahsuli, M. (2019) “Structural reliability approach to analysis of probabilistic seismic hazard and its sensitivities,” Bulletin of Earthquake Engineering (<a href="http://dx.doi.org/10.1007/s10518-018-0497-3">DOI</a>)</li>
+        <li id="MahsuliRahimiBakhshi">Mahsuli, M., Rahimi, H., Bakhshi, A. (2019) “Probabilistic seismic hazard analysis of Iran using reliability method,” Bulletin of Earthquake Engineering (<a href="http://dx.doi.org/10.1007/s10518-018-0498-2">DOI</a>)</li>
+
+    </ul>
+
+</body>
+
+</html>

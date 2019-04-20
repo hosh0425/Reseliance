@@ -1,0 +1,188 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Campbell Bozorgnia 2013 Intensity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Campbell Bozorgnia 2013 Intensity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RCampbellBozorgnia2013IntensityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models &gt; Model &gt; Hazard &gt; Earthquake &gt; Intensity &gt; Campbell Bozorgnia 2013 Intensity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the spectral acceleration, peak ground acceleration, or peak ground velocity at specified locations for given magnitude and hypocenter location of several earthquake sources as input , based on the Campbell-Bozorgnia (2014) attenuation relation.</li>
+	<li>Depth and width of each earthquake are predicted based on the 
+        formulas recommended in the Campbell-Bozorgnia (2014), if they are unknown.</li>
+    <li>In case of unkown parameters, you can enter the unknown-identifier (e.g. 999 in some fields) once for all inputs in each field, assuming all inputs of that field are unkown.</li>
+	<li>For more information, see <a href="#CampbellBozorgnia2013">Campbell-Bozorgnia 
+        (2014)</a>.</li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MagnitudeList">Magnitude List</h3>
+<ul>
+	<li>Magnitudes of various earthquake sources</li>
+</ul>
+
+<h3 id="DepthToTopOfRuptureList">Depth To Top Of Rupture List</h3>
+<ul>
+	<li>Depth to top of rupture of various earthquake sources (Use 999 in case of unknown)</li>
+</ul>
+
+<h3 id="DownDipRuptureWidthList">Down Dip Rupture Width List</h3>
+<ul>
+	<li>Down-dip width of rupture of various earthquake sources (Use 999 in case of unknown)</li>
+</ul>
+
+<h3 id="HorizontalDistanceFromTopOfRuptureList">Horizontal Distance From Top Of Rupture List</h3>
+<ul>
+	<li>Horizontal distance to top edge of rupture plane measured perpendicular to strike of various earthquake sources (Use 999 in case of unknown. In this case, it is assumed equal to hypocenter location distance)</li>
+</ul>
+
+<h3 id="RuptureDistanceList">Rupture Distance List</h3>
+<ul>
+	<li>Closest distance to rupture plane of various earthquake sources (Use 999 in case of unknown. In this case, it is calculated based on Pythagorean theorem using the depth of top edge of rupture and hypocenter location distance)</li>
+</ul>
+
+<h3 id="DipAngles">Dip Angles</h3>
+<ul>
+	<li>Dip angles of various earthquake sources (You can use approximate angles based on the fault type, provided in the literature)</li>
+</ul>
+
+<h3 id="SedimentFlags">Sediment Flags</h3>
+<ul>
+	<li>A helping variable. Enter 1, if you want the sediment depth effect to be considered, otherwise, enter 0. You can enter once for all locations</li>
+</ul>
+
+<h3 id="HypocentreLocationList">Hypocentre Location List</h3>
+<ul>
+	<li>Hypocenter locations of earthquake sources, which automatically will yield the radius \({R}\) to the various output locations</li>
+</ul>
+
+<h3 id="FaultTypes">Fault Types</h3>
+<ul>
+	<li>Fault mechanism that can either be NormalSlip, StrikeSlip, or ReverseSlip.</li>
+</ul>
+
+<h3 id="WallTypes">Wall Types</h3>
+<ul>
+	<li>Identifies the location to be whether on hanging-wall or footing-wall side of the rupture that can either be HangingWall, FootingWall, or Unknown. You can enter once for all locations. Using Unknown omits hanging-wall effects.</li>
+</ul>
+
+<h3 id="Regions">Regions</h3>
+<ul>
+	<li>Region of the location of the building which can either be California, Japan, 
+        China,Taiwan, or Other (If Other is used, the model will use California's specifications).</li>
+</ul>
+
+<h3 id="ShockType">Shock Type</h3>
+<ul>
+	<li>Identifies whether to cosider after-shock effects</li>
+</ul>
+
+<h3 id="EpsilonUncertaintyList">Epsilon Uncertainty List</h3>
+<ul>
+	<li>Intra-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="EtaUncertaintyList">Eta Uncertainty List</h3>
+<ul>
+	<li>Inter-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="ResponseType">Response Type</h3>
+<ul>
+	<li>Type of the response than can be either \({S_a}\), \({PGA}\), \({PGD}\), or \({PGV}\)</li>
+</ul>
+
+<h3 id="PeriodList">Period List</h3>
+<ul>
+	<li>List of the natural periods at which the intensity is evaluated</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here)</li>
+</ul>
+
+<h3 id="ShearWaveVelocityList">Shear Wave Velocity List</h3>
+<ul>
+	<li>List of the shear wave velocities at specified locations</li>
+</ul>
+
+<h3 id="DepthToVs1List">Depth To Vs 1 List</h3>
+<ul>
+	<li>List of the depths of Vs = 1 km/s boundry of the specified locations (Use 999 as input in case of unknown depth)</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>Earthquake intensities (as many as the locations provided in the input)</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="CampbellBozorgnia2013">Campbell, K. W., & Bozorgnia, Y. (2014). NGA-West2 Ground Motion Model for the Average Horizontal Components of PGA, PGV, and 5% Damped Linear Acceleration Response Spectra. Earthquake Spectra, 30(3), 1087–11151</li>
+    <li id="Baker">Baker, J. W. (n.d.). Ground motion prediction equation functions. Retrieved October 06, 2016, from https://web.stanford.edu/~bakerjw/GMPEs.html </li>
+</ul>
+
+</body>
+
+</body>
+
+</html>

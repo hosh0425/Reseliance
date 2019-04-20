@@ -1,0 +1,132 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Du Wang 2012 Intensity Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Du Wang 2012 Intensity Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RDuWang2012IntensityModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Hazard > Earthquake > Intensity > Du Wang 2012 Intensity</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model produces the cumulative absolute velocity at specified locations for given magnitude and hypocenter location of several earthquake sources as input , based on the Du-Wang (2012) attenuation relation.</li>
+	<li>Depth of each earthquake is predicted based on the magnitude.</li>
+	<li>For more information, see <a href="#DuWang2012">Du-Wang (2012)</a>.</li>
+</ul>
+
+<h3>DDM Sensitivities</h2>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="MagnitudeList">Magnitude List</h3>
+<ul>
+	<li>Magnitudes of various earthquake sources</li>
+</ul>
+
+<h3 id="HypocentreLocationList">Hypocentre Location List</h3>
+<ul>
+	<li>Hypocenter locations of earthquake sources, which automatically will yield the radius \({R}\) to the various output locations.</li>
+</ul>
+
+<h3 id="IntereventSigma">Interevent Sigma</h3>
+<ul>
+	<li>Inter-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="IntraeventSigma">Intraevent Sigma</h3>
+<ul>
+	<li>Intra-event model error, typically a standard normal random variable</li>
+</ul>
+
+<h3 id="Fault Type">Fault Type</h3>
+<ul>
+	<li>Fault mechanism that can either be Unspecified, Normal, ReverseOblique, or Reverse.</li>
+</ul>
+
+<h3 id="ResponseType">Response Type</h3>
+<ul>
+	<li>Type of the response is \({CAV}\).</li>
+</ul>
+
+<h3 id="StructureLocationList">Structure Location List</h3>
+<ul>
+	<li>List of the locations where the intensity will be computed at them (the output will give as many intensity values as the locations provided here)</li>
+</ul>
+
+<h3 id="SiteClass">Site Class</h3>
+<ul>
+	<li>Site class that can either be UnspecifiedClass, SGSSiteClassC, SGSSiteClassD.</li>
+</ul>
+
+<h3 id="HAndC1ToC8Uncertainty">H and C1 to C8 Uncertainty</h3>
+<ul>
+	<li>The uncertainty in attenuation relation coefficients represented by Standard Normal random variables.</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>Earthquake intensities (as many as the locations provided in the input)</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+
+<h2>References</h2>
+<ul>
+	<li id="DuWang2012">Wang, G., & Du, W. (2012). Empirical correlations between cumulative absolute velocity and spectral accelerations from NGA ground motion database. Soil Dynamics and Earthquake Engineering, 43, 229–236</li>
+</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+﻿<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Building Repair Cost Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Building Repair Cost Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RBuildingRepairCostModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Consequence > Economic > Building Repair Cost</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	$$l =\left( {{\eta _S} \cdot {C_S} + {\eta _{ND}} \cdot {C_{ND}} + {\eta _{NA}} \cdot {C_{NA}} + {\eta _C} \cdot {C_C}} \right) \cdot A \cdot \exp \left( { - r \cdot t} \right) \cdot \varepsilon  $$
+	where Building repair cost model gets the &ldquo;\({A}\)&rdquo; parameter from the Building information model.<br>
+	<b>Important Notes: </b>
+	<li>if the structural damage ratio exceeds the threshold, i.e. \({\eta _S}\) > \({\eta_R}\), all damage ratios are set to 1 and the loss is computed based on the modified values </li>
+	<li>The cost of repair operation is computed once it is completed (i.e. the repair status changes to 1), otherwise it is 0.</li>
+	<li>To use this model in analyzers other than Discrete Event Sampling Anlyzer, the "RepairStatus" property must be a constant parameter with current value of 1</li>
+	<li>For further information on this model, refer to <a href="#MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013)</a> and <a href="#MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013)</a>.</li>
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="BuildingInformationModel">Building Information Model</h3> 
+<ul>
+	<li>A building information model object that returns the total area of the building, \({A}\), to this model.</li>
+</ul>
+
+<h3 id="RepairabilityStructuralDamageRatio">Repairability Structural Damage Ratio</h3> 
+<ul>
+	<li>\({\eta_R}\) = The threshold of Structural Damage Ratio by which the building can be repaired, otherwise, it needs to be demolished and reconstructed</li>
+</ul>
+
+<h3 id="StructuralDamageRatio">Structural Damage Ratio</h3>
+<ul>
+	<li>\({\eta_S}\) = Structural damage ratio</li>
+</ul>
+
+<h3 id="NonstructuralDriftDamageRatio">Nonstructural Drift Damage Ratio</h3>
+<ul>
+	<li>\({\eta_{ND}}\) = Non-structural drift damage ratio </li>
+</ul>
+
+<h3 id="NonstructuralAccelerationDamageRatio">Nonstructural Acceleration Damage Ratio</h3>
+<ul>
+	<li>\({\eta_{NA}}\) = Non-structural acceleration damage ratio </li> 
+</ul>
+
+<h3 id="ContentDamageRatio">Content Damage Ratio</h3>
+<ul>
+	<li>\({\eta_C}\) = Content damage ratio</li>
+</ul>
+
+<h3 id="StructuralUnitAreaCost">Structural Unit Area Cost</h3>
+<ul>
+	<li>\({C_S}\) = Structural unit area cost (given as a real number)</li>
+</ul>
+
+<h3 id="NonstructuralDriftUnitAreaCost">Nonstructural Drift Unit Area Cost</h3>
+<ul>
+	<li>\({C_{ND}}\) = Non-structural drift unit area cost (given as a real number)</li>
+</ul>
+
+<h3 id="NonstructuralAccelerationUnitAreaCost">Nonstructural Acceleration Unit Area Cost</h3>
+<ul>
+	<li>\({C_{NA}}\) = Non-structural acceleration unit area cost (given as a real number)</li>
+</ul>
+
+<h3 id="ContentUnitAreaCost">Content Unit Area Cost</h3>
+<ul>
+	<li>\({C_C}\) = Content unit area cost (given as a real number)</li>
+</ul>
+
+<h3 id="Time">Time</h3>
+<ul>
+	<li>\({t}\) = Time object</li>
+</ul>
+
+<h3 id="AnnualInterestRate">Annual Interest Rate</h3>
+<ul>
+	<li>\({r}\) = Annual interest rate</li>
+</ul>
+
+<h3 id="Epsilon">Epsilon</h3>
+<ul>
+	<li>\({\varepsilon}\) = Model error</li>
+</ul>
+
+<h3 id="RepairStatus">Repair Status</h3>
+<ul>
+	<li>\({\varsigma}\) = Status of Repair operation (1 if completed, 0 otherwise)</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({l}\) = Loss due to the repair cost</li>
+	<li>The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;Response&rdquo;.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+	<h2>References</h2>
+	<ul>
+		<li id="MahsuliHaukaas20131">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part I: Models,” Structural Safety, 42, pp. 54-62 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.003">DOI</a>)</li>
+		<li id="MahsuliHaukaas20132">Mahsuli, M., Haukaas, T. (2013) “Seismic risk analysis with reliability methods, part II: Analysis,” Structural Safety, 42, pp. 63-74 (<a href="https://doi.org/10.1016/j.strusafe.2013.01.004">DOI</a>)</li>
+	</ul>
+
+
+</body>
+
+</html>

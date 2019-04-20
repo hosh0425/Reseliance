@@ -1,0 +1,123 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>MATLAB Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>MATLAB Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RMATLABModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > External Software > MATLAB</li>
+</ul>
+
+
+<h2>Model Description</h2>
+<h3>Model Form</h3>
+<ul>
+	<li>For users who have MATLAB installed on the computer, this model allows parameters to be given to MATLAB and results to be returned to Rt.</li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+<img src="images/matlabmenu.JPG" alt=""/>
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="ParameterList">Parameter List</h3>
+<ul>
+	<li>List of the parameters that should be mapped into the MATLAB model.</li>
+</ul>
+
+<h3 id="InputFile">Input File</h3>
+<ul>
+	<li>Absolute or relative path to the location of the MATLAB input file, for example: </li>
+	<p>C:/mystructure.inp</p>
+</ul>
+
+<h3 id="OutputFile">Output File</h3>
+<ul>
+	<li>Absolute or relative path to the location of the MATLAB output file, for example: </li>
+	<p>C:/mystructure.out</p>
+</ul>
+
+<h3 id="Minimize MATLAB Window">Minimize MATLAB Window</h3>
+<ul>
+	<li>Determines whether to minimize MATLAB window.</li>
+</ul>
+
+<h4>Hint:</h4>
+<li>Note that since Rtx does not ask for the path to the MATLAB executive file, it is required to this file is placed in the same folder as Rt's executive file.</li>
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not automatically create any response objects.</li>
+	<li>Rather, creates File Response objects.</li>
+	<li>In those objects, specify the name of the MATLAB and the name of the file where MATLAB puts the response.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h2>Example</h2> 
+
+<ul>
+	<li><strong>Function c is defined in MATLAB by the following expression:</strong></li>
+	$$c = 2a + b$$
+	<li><strong>a is a normal random variable with mean 1 and stdv 1. b is also a normal random variable with mean 2 and stdv 3.</strong></li>
+	<li><strong>Assume the function c is the limit-state function and calculate the probability of failure.</strong></li>
+	<h3>solution</h3>
+	<li>To execute an input file in MATLAB and use its results in Rt, one can use following procedure:</li>
+	<li>To run MATLAB successfully <strong>it is necessary</strong> to have a copy of MATLAB.exe file in the same directory as Rtx input file and MATLAB output file.</li>
+	<li>To import the results and use them in Rtx analyses, one can create a File Response object. For more information, you can check <a href="RFileResponse.html">File Response</a>.</li>
+	<p></p>
+	<img src="images/matlaboutput.JPG" alt=""/>
+	<p></p>
+	<li>Finally, a proper <a href="RFunction.html">Limit State Function</a> should be defined to evaluate failure probability and reliability index, using MATLAB results:</li>
+	<li>Before running the analyses, it is recommend to check whether Rtx and MATLAB are well-connected, using <a href="RFunctionEvaluationAnalyzer.html">Function Evaluation Analyzer</a>.</li>
+</ul>
+
+</body>
+
+</html>

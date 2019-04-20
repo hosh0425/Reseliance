@@ -1,0 +1,122 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>SAP2000 Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>SAP2000</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RSAP2000Model</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > External Software > SAP2000</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>For users who have SAP2000 installed on the computer, this model allows parameters to be given to SAP2000 and results to be returned to Rt.</li>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="ParameterList">Parameter List</h3>
+<ul>
+	<li>List of the parameters that should be mapped into the SAP2000 model.</li>
+</ul>
+
+<h3 id="ExecutableList">Executable List</h3>
+<ul>
+	<li>Relative or absolute path to the SAP2000.exe file, for example:</li> 
+	<p>C:/Program Files/Computers and Structures/SAP2000 14/SAP2000.exe</p>
+</ul>
+
+<h3 id="InputFile">Input File</h3>
+<ul>
+	<li>Absolute path to the location of the SAP2000 inputfile. Note that the file with $2k format has to be used as the input file, for example:</li>
+	<p>C:/Input.$2k</p>
+</ul>
+
+<h3 id="SolverType">Solver Type</h3>
+<ul>
+	<li>Type of solver that can be either "Standard" or "Advanced".</li>
+</ul>
+
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not automatically create any response objects.</li>
+	<li>Rather, create File Response objects.</li>
+	<li>In those objects, specify the name of the SAP2000 and the name of the file where SAP2000 puts the response.</li>
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+<h2>Example</h2> 
+
+<ul>
+	<img src="images/sapmenu.JPG" alt=""/>
+	<li>To etablish a functioning connection between SAP2000 and Rtx and use its results in Rt, the following procedure could be followed:</li>
+	<li>It is recommended that the output files of SAP2000 are saved in the same directory as Rt's executive file.</li>
+	<li>Make sure that the $2k file has to be registered as the input file</li>
+	<li>Properties of the SAP2000 object has to be filled as it has been described in the <a href="#ObjectName">properties</a> section.</li>
+	<li>List of random variables also has to be defined. Note that these variables have to have a consistent naming as the ones in the SAP2000 object</li>
+	<li>To extract the results and use them in Rtx analyses, one can create a <a href="RDatabaseResponse.html">Database Response</a> like this:</li>
+	<p></p>
+	<img src="images/sapfile.JPG" alt=""/>
+	<p></p>
+	<li>You can check <a href="RDatabaseResponse.html">Database Response</a> for further information on how to fill out the properties section.</li>
+	<p></p>
+	<li>Finally, a proper <a href="RFunction.html">Limit State Function</a> should be defined to evaluate failure probability and reliability index, using SAP2000 results:</li>
+	<li>Before running the analyses, it is recommended to check whether Rtx and SAP2000 are well-connected, using <a href="RFunctionEvaluationAnalyzer.html">Function Evaluation Analyzer</a>.</li>
+</ul>
+
+</body>
+
+</html>

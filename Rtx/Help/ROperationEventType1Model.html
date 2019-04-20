@@ -1,0 +1,120 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Operation Event Type 1 Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Operation Event Type 1</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>ROperationEventType1Model</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Event > Operation Type 1</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model schedules the events of conducting an operation for different components.</li>
+	<b>Note:</b> In this model, there is one operator with a capacity and there several components that form the demand for the operation.<br>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="TimeParameter">Time Parameter</h3>
+<ul>
+	<li>Time object</li>
+</ul>
+
+<h3 id="OperationCapacity">Operation Capacity</h3>
+<ul>
+	<li>The capacity of conducting the operation (Each unit consists of material, labor, and equipment)</li>
+</ul>
+
+<h3 id="OperationTimeList">Operation Time List</h3>
+<ul>
+	<li>List of the duration of conducting the operation for different components</li>
+</ul>
+
+<h3 id="OperationFinishStatusList">Operation Finish Status List</h3>
+<ul>
+	<li>List of the status parameters of the operation for different components (1 if finished, 0 otherwise)</li>
+</ul>
+
+<h3 id="PriorityRule ">Priority Rule </h3>
+<ul>
+	<li>Method of prioritizating the components for the operation</li>
+	<li>The &ldquo;In Order Of Input&rdquo; option schedules the events based on the order of the components input by the user, on a first come first served basis</li>
+	<li>The &ldquo;In Order Of Importance&rdquo; option schedules the events based on the order of importance of components. Note that, if this option is selected, the list of the importance measure of all components must be input in the &ldquo;Importance Measure List&rdquo; property.</li>
+</ul>
+
+<h3 id="ImportanceMeasureList">Importance Measure List</h3>
+<ul>
+	<li>List of the importance measure of all components</li>
+</ul>
+
+<h3 id="NumberOfPrerequisiteOperations">Number Of Prerequisite Operations</h3>
+<ul>
+	<li>The number of operations that have to be finished before the current operation can start (Finish-to-Start prerequisite)</li>
+</ul>
+
+<h3 id="PrerequisiteOperationsFinishStatusList">Prerequisite Operations Finish Status List</h3>
+<ul>
+	<li>List of the status of the prerequisite operations of the current operation for differnet components (1 if finished, 0 otherwise). The size of this list must be equal to the number of prerequisite operations times the number of the components </li>
+	<li><b>Note:</b> First, the status parameters of the first prerequisite operation for all components are input. Next, the status parameters of the second prerequisite operation for all components are input. This procedure continues untill all of the prerequisite operations of all components are input.  </li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not generate response objects.</li>
+	<li>It provides the scheduled events to the orchestrating algorithm.</li>
+</ul>	
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

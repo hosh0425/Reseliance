@@ -1,0 +1,91 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Healthcare Demand Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Healthcare Demand Model</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RHealthcareDemandModel</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Infrastructure > Healthcare > Healthcare Demand</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	\[{{N}_{all}}=\sum{{{n}_{i}}}\]
+	<b>Note1:</b> The "All" response, i.e. \({N_{all}}\), enumerates the total number of injuries who have been rescued since the start of the analysis (until the time the model is called). <br>
+	<b>Note2:</b> The "New" response, i.e. \({N_{new}}\), is the same as "All" response with the difference that it enumerates the number of injuries who have been just rescued and added to the healthcare demand (at the time the model is called). <br>
+
+	
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="NumberOfRescuedInjuriesList">Number Of Rescued Injuries List</h3>
+<ul>
+	<li>{\({n_i}\)} = Number of rescued injuries for building \({i}\) (or any other facility which produces casualties due to the hazard)</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>\({N_{all}}\) = Total number of injuries who need to be hospitalized</li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;AllResponse&rdquo;.
+
+	<li>\({N_{new}}\) = The number of injuries who have been just rescued and need to be hospitalized (at the time the model is called). </li>
+	The output is an automatically generated generic response object, which takes the object name of the model plus &ldquo;NewResponse&rdquo;.
+	
+</ul>
+
+
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>

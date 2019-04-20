@@ -1,0 +1,107 @@
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<title>Time Event Type 1 Model</title>
+
+<link href="images/style.css" rel="stylesheet" type="text/css">
+  
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+<body>
+
+
+<h1>Time Event Type 1</h1>
+
+
+<h2>Class Name</h2>
+
+<ul>
+	<li>RTimeEventType1Model</li>
+</ul>
+
+
+<h2>Location in Objects Pane</h2>
+<ul>
+	<li>Models > Model > Event > Time Type 1</li>
+</ul>
+
+
+<h2>Model Description</h2>
+
+<h3>Model Form</h3>
+<ul>
+	<li>This model schedules the events in some specified points in time, input by the user.</li>
+	<b>Note:</b> At those specified points in time, the current value of the input parameters are modified, based on the modification rule defined by the user.<br>
+
+</ul>
+
+<h3>DDM sensitivities</h3>
+<ul>
+	<li>No</li>
+</ul>
+
+
+<h2>Properties</h2>
+<h3 id="ObjectName">Object Name</h3>
+<ul>
+	<li>Name of the object in Rt</li>
+	<li>Allowable characters are upper-case and lower-case letters, numbers, and underscore (&ldquo;_&rdquo;).</li>
+	<li>The name is unique and case-sensitive.</li>
+</ul>
+
+<h3 id="DisplayOutput">Display Output</h3>
+<ul>
+	<li>Determines whether the model is allowed to print messages to the Output Pane.</li>
+</ul>
+
+<h3 id="TimeParameter">Time Parameter</h3>
+<ul>
+	<li>Time object</li>
+</ul>
+
+<h3 id="EventTimeList">Event Time List</h3>
+<ul>
+	<li>List of the time of the events which are supposed to be scheduled.</li>
+</ul>
+
+<h3 id="ParameterList">Parameter List</h3>
+<ul>
+	<li>List of parameters which are supposed to be modifed at the time of the scheduled events.</li>
+</ul>
+
+<h3 id="ModificationRule ">Modification Rule </h3>
+<ul>
+	<li>Method of modifying the current value of the parameters:</li>
+	<li>The &ldquo;Add&rdquo; option, adds the current value of corresponding modification factor to the current value of the parameter. </li>
+	<li>The &ldquo;Substract&rdquo; option, substracts the current value of corresponding modification factor from the current value of the parameter. </li>
+	<li>The &ldquo;Multiply&rdquo; option, multiplies the current value of corresponding modification factor to the current value of the parameter. </li>
+	<li>The &ldquo;Divide&rdquo; option, divides the current value of the parameter by the current value of corresponding modification factor. </li>
+	<li>The &ldquo;Set Equal To&rdquo; option, sets the current value of the parameter to the current value of corresponding modification factor. </li>
+</ul>
+
+<h3 id="ModificationFactorList">Modification Factor List</h3>
+<ul>
+	<li>List of the modification factors. This size of this list must be either one or equal to the size of the list of parameters.</li>
+</ul>
+
+<h2>Output</h2>
+<ul>
+	<li>This model does not generate response objects.</li>
+	<li>It provides the scheduled events to the orchestrating algorithm.</li>
+</ul>	
+<h2>Right-click Menu</h2>
+
+<h3 id="Remove">Remove</h3>
+<ul>
+	<li>Removes the object.</li>
+</ul>
+
+</body>
+
+</html>
